@@ -10,7 +10,7 @@ I enjoy making Tutorials for Unreal Engine in my spare time.
 <ul class="post-list">
   {% for post in site.Tutorials %}
     <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <span class="post-meta">{{ post.date | date: "%-d %B %Y" }}</span>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}

@@ -2,7 +2,7 @@
 layout: post
 title:  "How To Make A Flashlight Component in UE5 using C++"
 categories: UE5 C++ Components Flashlight
-tags: ["programming", "jekyll"]
+date: 16-02-2023
 regenerate: true
 ---
 
@@ -23,15 +23,15 @@ regenerate: true
 
 Flashlights are very easy to create in C++ as they are essentially Spotlight Components that are already built into the Engine
 
-![](/assets/Images/Flashlight/NewC++Class.png)
+![](/assets/images//NewC%2B%2BClass.png)
 
 Select a Spotlight as the Base Class
 
-![](/assets/Images/Flashlight/SpotlightComponent.png)
+![](/assets/images/Flashlight/SpotlightComponent.png)
 
 Then choose where it should be save, and under what name. If you have a module to put it into, this is where you select it
 
-![](/assets/Images/Flashlight/CreateFlashlightComponent.png)
+![](/assets/images/Flashlight/CreateFlashlightComponent.png)
 
 
 When it finally loads up in your IDE of choice, you'll see a quite empty object.  
@@ -68,7 +68,7 @@ void UFlashlight_Component::ToggleFlashlight()
 Compile/Build it (Control + B in Visual Studio) and now open Unreal Engine again.
 Add it to a Blueprint and hook up the controls
 
-![](/assets/Images/Flashlight/BP%20Flashlight.png)
+![](/assets/images/Flashlight/BP%20Flashlight.png)
 
 
 Test it out with the input and you should have a Flashlight that toggles on and off.
