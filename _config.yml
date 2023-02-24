@@ -34,7 +34,10 @@ youtube_url: https://www.youtube.com/channel/UC3vRLT5pJCbctTmoESVNYPw
 theme: minima
 plugins:
   - jekyll-feed
-  
+  - jekyll-seo-tag
+
+
+
 permalink: /:title/
 
 collections:
