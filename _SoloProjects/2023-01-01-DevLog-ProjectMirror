@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Dev Log - Project Mirror #1"
+categories: UE5 C++ 
+regenerate: true
+---
+
+
+Project Mirror is a project I'm working on through SpyderWeb Studios, my games studio. This is the project that I have been working on since I started games development, it is the project that I opened Unreal Engine for the first time to develop.  
+
+There has obviously been a lot of versions of this project as I have ran into common problems that many people when they start off do. From accidentally deleting the source folder without a backup to the whole project corrupting due a USB stick, I have ran into all of them but never have I done so twice. I have taken each setback in my stride and just carried as much as I can into a new project and continue. 
+
+When I first started, I had no source control, doing pretty much everything on tick on the player character and imported every package that I could find that seemed cool at the time (I was 17 at this time). Since then, I have setup my own server on perforce, and have delegated to components that run their logic on timers that I can more finely control than if it was on tick. And of course, I have been a lot more selective with the marketplace content I bring into the project. Not only that, but I have also been utilising modules in my C++ code to make it easier to encapsulate classes and carry them over into other projects if I want to. 

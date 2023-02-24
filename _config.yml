@@ -27,7 +27,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 github_username:  AgentArachnid66
-
+youtube_username: AgentArachnid
+youtube_url: https://www.youtube.com/channel/UC3vRLT5pJCbctTmoESVNYPw
 
 # Build settings
 theme: minima
@@ -37,11 +38,15 @@ plugins:
 permalink: /:title/
 
 collections:
+
   SoloProjects:
     output: true
-  Tutorials:
-    output: true
+
   University:
+    output: true
+
+  Tutorials:
+    permalink: /Tutorials/:title/
     output: true
 
 # Exclude from processing.
