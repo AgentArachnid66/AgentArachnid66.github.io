@@ -15,7 +15,7 @@ My CV can be viewed [here](/assets/Downloadable/PaulBrown_CV%20-%20Google%20Docs
 {% unless collection.label == "posts" %}
 
 
-{%- assign posts = posts | concat: collection.docs limit 3%}
+{%- assign posts = posts | concat: collection.docs limit 3 -%}
         
 {% endunless%}
 {% endfor %}

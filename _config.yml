@@ -43,10 +43,12 @@ permalink: /:title/
 
 collections:
 
-  SoloProjects:
+  SpyderWebStudios:
+    permalink: /SpyderWebStudios/:title/
     output: true
 
   University:
+    permalink: /University/:title/
     output: true
 
   Tutorials:

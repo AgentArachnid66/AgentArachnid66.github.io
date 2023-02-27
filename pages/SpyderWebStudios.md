@@ -2,12 +2,13 @@
 layout: default
 title: SpyderWeb Studios
 permalink: /SpyderWebStudios/
+regenerate: true
 ---
 
 # This is where I update on any progress towards my personal projects, both Open Source and Proprietary
 
 <ul class="post-list">
-  {% for post in site.SoloProjects %}
+  {% for post in site.SpyderWebStudios %}
     <li>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
