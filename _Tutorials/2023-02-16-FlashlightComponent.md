@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "How To Make A Flashlight Component in UE5 using C++"
+thumbnail: "/assets/images/Flashlight/Thumbnail.png"
 categories: UE5 C++ Components Flashlight
 date: 16-02-2023
 regenerate: true

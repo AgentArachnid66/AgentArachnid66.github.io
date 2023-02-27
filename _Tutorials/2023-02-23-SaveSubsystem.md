@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "How To Make A Saving & Loading Subsystem in UE5 using C++"
+thumbnail: "/assets/images/SaveLoading/Thumbnail.png"
 categories: UE5 C++ Subsystem Saving Loading
 date: 23-02-2023
 regenerate: true

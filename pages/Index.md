@@ -14,6 +14,7 @@ Here is a master list of all Posts on the Website
   <ul class="post-list">
     {% for item in site[collection.label] %}
       <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+<img src="{{ item.thumbnail }}" />
     {% endfor %}
   </ul>
 {% endfor %}

@@ -28,9 +28,10 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 github_username:  AgentArachnid66
 youtube_username: AgentArachnid
-youtube_url: https://www.youtube.com/channel/UC3vRLT5pJCbctTmoESVNYPw
+youtube_url: "UC3vRLT5pJCbctTmoESVNYPw"
+linkedin_username: Paul Brown
+linkedin_url: paul-b-745268138
 
-# Build settings
 theme: minima
 plugins:
   - jekyll-feed
