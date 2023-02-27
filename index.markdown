@@ -3,18 +3,12 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+title: Home
 ---
 
 Welcome to my website, a central place where you can view everything I have been working on. 
 
 My CV can be viewed [here](/assets/Downloadable/PaulBrown_CV%20-%20Google%20Docs.pdf)
-
-
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
 
 
 {% for collection in site.collections %}
@@ -29,7 +23,7 @@ My CV can be viewed [here](/assets/Downloadable/PaulBrown_CV%20-%20Google%20Docs
 
 
 {%- if posts.size > 0 -%}
-  {% assign posts = posts | sort: 'date'| reverse %}
+  {% assign posts = posts | sort: 'collection'| reverse %}
   
   {%- if page.list_title -%}
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
@@ -68,5 +62,3 @@ My CV can be viewed [here](/assets/Downloadable/PaulBrown_CV%20-%20Google%20Docs
     {%- endif %}
 
   {%- endif -%}
-
-</div>

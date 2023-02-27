@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Index Page
+title: Index
 permalink: /Index/
 ---
 
@@ -10,11 +10,13 @@ Here is a master list of all Posts on the Website
 {% if collection.label == 'posts' %}
     {% continue %}
   {% endif %}
-  <h2>Items from {{ collection.label }}  </h2>
+  <h2>{{ collection.label }}</h2>
   <ul class="post-list">
     {% for item in site[collection.label] %}
-      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-<img src="{{ item.thumbnail }}" />
+      <li> <a class="post-link" href="{{ item.url | relative_url }}">
+            {{ item.title | escape }}
+            <img src="{{ item.thumbnail }}" />
+          </a></li>
     {% endfor %}
   </ul>
 {% endfor %}
