@@ -14,7 +14,8 @@ I enjoy making Tutorials for Unreal Engine in my spare time.
 
 <div>
 <ul class="post-list">
-  {% for post in site.Tutorials %}
+{% assign posts = site.Tutorials | sort: 'date' | reverse %}
+  {% for post in posts %}
     <li>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
