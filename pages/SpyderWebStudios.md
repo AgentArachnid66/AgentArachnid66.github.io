@@ -8,7 +8,8 @@ regenerate: true
 # This is where I update on any progress towards my personal projects, both Open Source and Proprietary
 
 <ul class="post-list">
-  {% for post in site.SpyderWebStudios %}
+{% assign posts = site.SpyderWebStudios | sort: 'date' | reverse %}
+  {% for post in posts %}
     <li>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">

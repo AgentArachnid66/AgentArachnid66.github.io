@@ -15,13 +15,15 @@ When I first started, I had no source control, doing pretty much everything on t
 <p></p>
 
 Onto the actual development I have accomplished over the past few iterations, I have used C++ Modules & Plugins to implement:
+<div>
 <ul>
 <li> Saving and Loading Subsystems that can be used in any project, after some per project customisation </li>
 <li> Controllable drone that can fly around the map </li>
-<li> Clue System that is completely [open source](https://github.com/SpyderWeb-Studios/ClueSystem) and is designed for users who haven't touched C++ before </li>
+<li> Clue System that is completely <a href = "https://github.com/SpyderWeb-Studios/ClueSystem">Open Source</a> and is designed for users who haven't touched C++ before </li>
 <li> A Hacking Mini Game that is based on actual Boolean Logic and Logic Gates </li>
 <li> An AI Director that can see where the player has been and what they have interacted with the most, to guide the AI Pawns to deliver the best possible experience </li>
 </ul>
+</div>
 <p></p>
 In Blueprints, I then derive from the relevant classes as well as prototype new features to convert to C++ later. 
 
