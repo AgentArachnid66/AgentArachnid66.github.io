@@ -1,7 +1,7 @@
 ---
 layout: default
-title: SpyderWeb Studios
-permalink: /SpyderWebStudios/
+title: Personal Projects
+permalink: /PersonalProjects/
 regenerate: true
 ---
 
