@@ -8,7 +8,7 @@ regenerate: true
 # This is where I update on any progress towards my personal projects, both Open Source and Proprietary
 
 <ul class="post-list">
-{% assign posts = site.SpyderWebStudios | sort: 'date' | reverse %}
+{% assign posts = site.PersonalProjects | sort: 'date' | reverse %}
   {% for post in posts %}
     <li>
         <h3>
