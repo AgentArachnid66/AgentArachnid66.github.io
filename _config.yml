@@ -44,7 +44,7 @@ permalink: /:title/
 collections:
 
   SpyderWebStudios:
-    permalink: /SpyderWebStudios/:title/
+    permalink: /PersonalProjects/:title/
     output: true
 
   University:
