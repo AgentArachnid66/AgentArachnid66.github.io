@@ -43,7 +43,7 @@ permalink: /:title/
 
 collections:
 
-  SpyderWebStudios:
+  PersonalProjects:
     permalink: /PersonalProjects/:title/
     output: true
 
