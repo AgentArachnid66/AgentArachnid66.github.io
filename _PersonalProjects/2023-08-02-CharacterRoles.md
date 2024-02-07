@@ -19,5 +19,15 @@ You can read the Full Documentation I made for this plugin [here](https://spyder
 
  To make it more flexible, I also created an interface to be implemented on the Owning Actor of the Register Component. This is to extend the functionality and also redirect the Register Component to the Management Component if it is placed somewhere other then the Game Mode. 
 
- The final step in this project was to actually assign the roles. I currently have 2 flags to control if the role is missable and if it can be overwritten by another role. I also have a variable to control how many of each role can be assigned. Using these 3 values, the roles are assigned to each Registered Component which takes the Subclass and spawns in a new component automatically.
+ The final step in this project was to actually assign the roles. 
+ ~~I currently have 2 flags to control if the role is missable and if it can 
+ be overwritten by another role.~~ I have updated this system to use an integer
+to place priority on the roles, so that the highest priority role cannot be overwritten
+by a lower priority role. This is much simpler to use and to implement.
+
+ I also have a variable to control how many of each role can be assigned. 
+ Using these 3 values, the roles are assigned to each Registered Component 
+ which takes the Subclass and spawns in a new component automatically. It is the
+intention to enable the host to change these parameters to control the gameplay
+experience and to allow for a more dynamic game.
 
