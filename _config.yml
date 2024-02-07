@@ -43,7 +43,6 @@ future: true
 permalink: /:title/
 
 collections:
-
   PersonalProjects:
     permalink: /PersonalProjects/:title/
     output: true

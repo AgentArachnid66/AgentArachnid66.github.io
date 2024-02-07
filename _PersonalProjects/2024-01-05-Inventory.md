@@ -9,13 +9,16 @@ published: true
 
 # Multiplayer Modular Inventory & Crafting System
 
+<p>
 I have been working on a project that involves an inventory and crafting system. I have been using Unreal Engine 5 and C++ to create this system.
-
+</p>
+<p>
 This system will need to be functional for multiplayer, easy to extend and 
 easy to use. I have been using a lot of the built-in Unreal Engine features 
 to make this system as robust as possible.
 
 I have integrated the systems into the Editor and made it easy to create new items and recipes.
+</p>
 
  (/assets/images/Plugins/Inventory/Editor.png)
 
