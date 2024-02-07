@@ -1,10 +1,13 @@
 ﻿---
 layout: post
-title:  "Inventory & Crafting Systems"
+title: "Multiplayer Modular Inventory & Crafting System"
 categories: UE5 C++
 date: 05-01-2024
 regenerate: true
+published: true
 ---
+
+# Multiplayer Modular Inventory & Crafting System
 
 I have been working on a project that involves an inventory and crafting system. I have been using Unreal Engine 5 and C++ to create this system.
 
@@ -14,7 +17,7 @@ to make this system as robust as possible.
 
 I have integrated the systems into the Editor and made it easy to create new items and recipes.
 
-![](/assets/images/PersonalProjects/Inventory/Editor.png)
+ (/assets/images/Plugins/Inventory/Editor.png)
 
 
 ## Inventory
@@ -52,7 +55,7 @@ The base Item Class can be extended to add in additional functionality, such as:
 
 Below is an example of an Item that has a Gameplay Ability attached to it.
 
-![](/assets/images/PersonalProjects/Inventory/AbilityItem.png)
+(/assets/images/Plugins/Inventory/AbilityItem.png)
 
 The Default section is where the Ability can be assigned. It was specialised as a 
 BP child of the Item class, which is why the variables that should be hidden are visible.
@@ -81,7 +84,7 @@ a per crafting table basis
 
 The Recipe Objects are defined as assets, so they can be loaded separately. This allows for easy extension and modification of the crafting system.
 
-![](/assets/images/PersonalProjects/Inventory/TestRecipe.png)
+(/assets/images/Plugins/Inventory/TestRecipe.png)
 
 The Recipe Object has a few different sections to it. 
 The first section is the Recipe Ingredients, which is used by the Recipe Management Component to check if the player can craft the item. 

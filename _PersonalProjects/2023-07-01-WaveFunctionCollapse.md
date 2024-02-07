@@ -12,5 +12,4 @@ Since I wanted this to be as extensible and useful as possible, I decided to imp
 
 The result of this experiment is a highly scalable and useful module that can be used from as small as selecting a random colour for a bunch of cubes based on distance to selecting which items to spawn in based on gameplay tags and finally, to the common usage of the wave function collapse algorithm, generating tilemaps. 
 
-![](/assets/images/PersonalProjects/WFC_Cubes.png)
-w
+![](/assets/images/Plugins/WFC_Cubes.png)

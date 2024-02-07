@@ -16,23 +16,23 @@ The approach I went for was a very Object-Oriented one. Everything is split up i
 the different aspects of the quest system. Quests are contain stages which hold Objectives, which hold a set of prerequisites and rewards 
 and they can track the progress via a Progress Object.
 
-![](/assets/images/PersonalProjects/Quest/Functions.png)
+![](/assets/images/Plugins/Quest/Functions.png)
 
 ## Quest Data
 
-![](/assets/images/PersonalProjects/Quest/Quest_DA.png)
+![](/assets/images/Plugins/Quest/Quest_DA.png)
 
 Each of these components can be extended to create a variety of different quest types. To add on to this, I have set the 
 system up to be easy to use by using instanced objects that can be created in the editor and then used in the game.
 
-![](/assets/images/PersonalProjects/Quest/Quest_Objective_DA.png)
+![](/assets/images/Plugins/Quest/Quest_Objective_DA.png)
 
 ### Progress Objects
 
 The Instanced Objects can be used to create a variety of different quest types. Each of them have their own set of
 variables to config the Objective to be used in the game. This allows for a lot of flexibility in the system.
 
-![](/assets/images/PersonalProjects/Quest/Progress_Example.png)
+![](/assets/images/Plugins/Quest/Progress_Example.png)
 
 Easily one of the simplest, yet powerful, features of the Progress Object is the Progress Text field. This is a text
 field that will be used to display the progress of the Objective to the player using tokens that can be registered 
@@ -60,7 +60,7 @@ This would be a good feature as it will allow for more complex quest types that 
 
 ### Reward Objects
 
-![](/assets/images/PersonalProjects/Quest/Reward_Example.png)
+![](/assets/images/Plugins/Quest/Reward_Example.png)
 
 After changing the state of an objective, the Player can receive Rewards. These can be added to any Objective State and 
 will be given to the Player when the Objective State is changed. This is a simple class that holds the data for the
