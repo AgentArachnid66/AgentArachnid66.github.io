@@ -19,7 +19,7 @@ This unit was one of my favourites at University, as it was a challenge to creat
 
 I managed to fully utilise all 3 technologies to make a tech demo that still impresses. 
 
-I faced a major roadblock as I couldn't get the keywords system to work so with less than 24 hours to go, I created my own basic version of it using dictionaries. 
+I faced a major roadblock as I couldn't get the keywords system to work so with less than 24 hours to go, I created my own basic version of it using dictionaries.
 
 ```csharp
  // This Function Processes a Sentence the Player Says

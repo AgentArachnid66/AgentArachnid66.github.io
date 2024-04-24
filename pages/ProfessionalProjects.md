@@ -1,14 +1,14 @@
 ---
-layout: default
-title: Personal Projects
-permalink: /PersonalProjects/
+layout: page
+title: Professional Projects
+permalink: /ProfessionalProjects/
 regenerate: true
 ---
 
-This is where I update on any progress towards my personal projects, both Open Source and Proprietary software
+These are the projects that I have been involved with since leaving University. 
 
 <ul class="post-list">
-{% assign posts = site.PersonalProjects | sort: 'date' | reverse %}
+{% assign posts = site.ProfessionalProjects | sort: 'date' | reverse %}
   {% for post in posts %}
     <li>
         <h3>
