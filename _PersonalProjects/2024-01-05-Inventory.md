@@ -14,7 +14,9 @@ to make this system as robust as possible.
 
 I have integrated the systems into the Editor and made it easy to create new items and recipes.
 
-![](./assets/images/Plugins/Inventory/Editor.png)
+
+![](/assets/images/Tutorials/EQS/EQS_ClassChosen.png)
+![](/assets/images/Inventory/Editor.png)
 
 
 ## Inventory
@@ -52,7 +54,7 @@ The base Item Class can be extended to add in additional functionality, such as:
 
 Below is an example of an Item that has a Gameplay Ability attached to it.
 
-![](./assets/images/Plugins/Inventory/AbilityItem.png)
+![](/assets/images/Inventory/AbilityItem.png)
 
 The Default section is where the Ability can be assigned. It was specialised as a 
 BP child of the Item class, which is why the variables that should be hidden are visible.
@@ -83,7 +85,7 @@ By separating the workflow up into these steps, it opens up the possibility to a
 
 The Recipe Objects are defined as assets, so they can be loaded separately. This allows for easy extension and modification of the crafting system.
 
-![](./assets/images/Plugins/Inventory/TestRecipe.png)
+![](/assets/images/Inventory/TestRecipe.png)
 
 The Recipe Object has a few different sections to it. 
 The first section is the Recipe Ingredients, which is used by the Recipe Management Component to check if the player can craft the item. 
