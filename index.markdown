@@ -11,54 +11,19 @@ Welcome to my website, a central place where you can view everything I have been
 My CV can be viewed [here](/assets/Downloadable/PaulBrown_CV%20-%20Google%20Docs.pdf)
 
 
-{% for collection in site.collections %}
-{% unless collection.label == "posts" %}
-
-
-{%- assign posts = posts | concat: collection.docs limit 3 -%}
-        
-{% endunless%}
+{% for collection in site.collections%}
+{% if collection.label == 'posts' %}
+{% continue %}
+{% endif %}
+<h2>{{ collection.label }}</h2>
+  <ul class="post-list">
+    {% for item in site[collection.label] %}
+      <li> <a class="post-link" href="{{ item.url | relative_url }}">
+            {{ item.title | escape }}
+            <img src="{{ item.thumbnail }}" />
+          </a></li>
+    {% endfor %}
+  </ul>
 {% endfor %}
 
 
-
-{%- if posts.size > 0 -%}
-  {% assign posts = posts | sort: 'collection'| reverse %}
-  
-  {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
-    <ul class="post-list">
-      {%- for post in posts -%}
-      <li>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    {% if site.paginate %}
-      <div class="pager">
-        <ul class="pagination">
-        {%- if paginator.previous_page %}
-          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-          <li><div class="current-page">{{ paginator.page }}</div></li>
-        {%- if paginator.next_page %}
-          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-        </ul>
-      </div>
-    {%- endif %}
-
-  {%- endif -%}

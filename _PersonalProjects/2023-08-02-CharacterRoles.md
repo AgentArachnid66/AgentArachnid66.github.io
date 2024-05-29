@@ -31,3 +31,12 @@ by a lower priority role. This is much simpler to use and to implement.
 intention to enable the host to change these parameters to control the gameplay
 experience and to allow for a more dynamic game.
 
+
+## Future Rework
+
+One of my next releases will require a rework to this system. The initial requirements were to select
+a role per pawn, as the players will be able to select a character to spawn in as and a role would
+be applied to them. In future, I may want the role to be applied by changing the Pawn Class itself.
+
+My current plan for this rework is to delegate the choices to objects that I can instance as a property, 
+and pass in how I want it to handle a certain rol (if it is via component, Pawn Class or something else)

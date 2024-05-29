@@ -13,9 +13,9 @@ Unreal Engine has a feature called Seamless Travel, which gives the developer a 
 
 Going to C++ for more control, I added to my main Player State that I use in the Lobby and override the `SeamlessTravelTo` function. Attempt to find the corresponding component on the Player State that will be loaded in the main game, and set the values. 
 
-This will allow the component to be setup but that's only half of the puzzle. The other half is loading it in when the game starts. Luckily, this method makes use of the Game Mode's `Get Default Pawn From Controller` function as the default Pawn Class will already be set by the time that the execution gets to this point. 
+This will allow the component to be setup but that's only half of the problem. The other half is loading it in when the game starts. Luckily, this method makes use of the Game Mode's `Get Default Pawn From Controller` function as the default Pawn Class will already be set by the time that the execution gets to this point. 
 
 Simply by getting the player state from the input controller, and attempting to find the component that holds the data, we can plug in the Pawn Class retrieved into the return value for the `Get Default Pawn From Controller`function.
 
-This method is a lot cleaner, extensible and more in line with the engine design, so is (in my opinion) superior to a lot of other implementations. 
+This method is a lot cleaner, extensible and more in line with the engine design, so (in my opinion) is  superior to a lot of other implementations. 
 
