@@ -12,18 +12,17 @@ I decided to challenge myself by creating a multiplayer quest system.
 I wanted to create a system that would allow for a variety of quest types & quest rewards,
 and be able to handle multiple players.
 
-The approach I went for was a very Object-Oriented one. Everything is split up into different classes that will handle 
-the different aspects of the quest system. Quests are contain stages which hold Objectives, which hold a set of prerequisites and rewards 
-and they can track the progress via a Progress Object.
+The approach I went for was a very Object-Oriented one. Everything is split up into different classes that will handle the different aspects of the quest system. Quests contain stages which hold Objectives, which hold a set of prerequisites and rewards and they can track the progress via a Progress Object.
 
 ![](https://imgur.com/m8uNuxN.png)
 
 ## Quest Data
 
+The Data Asset can be setup to provide a wide range of possibilities. In the example below, I have setup an quest for the player who was assigned the murderer role. You can see that it has the prerequisite for a role, which prevents this quest being accidentally added to another role. You can add prerequisites for pretty much anything, and you can add as many as you require.  
+
 ![](https://imgur.com/ppTRlmT.png)
 
-Each of these components can be extended to create a variety of different quest types. To add on to this, I have set the 
-system up to be easy to use by using instanced objects that can be created in the editor and then used in the game.
+Each of these components can be extended to create a variety of different quest types. To add on to this, I have set the system up to be easy to use by using instanced objects that can be created in the editor and then used in the game.
 
 ![](https://imgur.com/zckujE7.png)
 
@@ -56,7 +55,7 @@ Quest and is a certain level.
 
 Currently, it does not return anything if the Player has failed the prerequisite check, but this can be added in the future.
 This would be a good feature as it will allow for more complex quest types that can be failed and retried, or to give player
- feedback on why they can't accept the Objective.
+ feedback on why they can't accept the Objective. This feature is a part of the internal roadmap for after releasing the plugin on the marketplace.
 
 ### Reward Objects
 
@@ -66,6 +65,9 @@ After changing the state of an objective, the Player can receive Rewards. These 
 will be given to the Player when the Objective State is changed. This is a simple class that holds the data for the
 reward to give. This can be as simple as giving the Player 100 gold, or as complex as giving the Player a new item. The 
 aim of this system was to be able to extend to interact with any system in the game. 
+
+You can create custom reward objects for any purpose and to interact with external systems. In the plugin, I have included 
+a simple XP Component and Gold Management Component to give examples on how to do this in both C++ and Blueprint. 
 
 I'd like to add to the base class to be able to retrieve information for the UI. This would allow for the UI to display
 the rewards dynamically. 
