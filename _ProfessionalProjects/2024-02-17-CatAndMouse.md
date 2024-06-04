@@ -14,16 +14,17 @@ Role: Developer
 
 In this solo endeavor, I have taken on every role in the pipeline. This includes the programmer, designer, modeller and project manager. With a keen eye for detail and a passion for problem-solving, I meticulously crafted the game's codebase from scratch, ensuring its stability and scalability in multiplayer environments.
 
-Technical Expertise
+## Technical Expertise
 
 Delving into the complexities of multiplayer networking, I navigated the Unreal Engine's networking framework to facilitate seamless online gameplay. Leveraging EOS integration, I established connectivity features essential for a smooth transition between platforms. Additionally, setting up a Perforce server on Digital Ocean provided robust version control, enabling efficient collaboration across iterations. 
 
 My workflow for this project has been a incredible contributor to how I was able to achieve so much in the timespan I have. When I want to create a major feature, I usually start by creating a module or plugin (depending on the size and reusability) and start with a more generic solution. Two great examples of this would be the [Inventory]({{ site.baseurl }}{% link _PersonalProjects/2024-01-05-Inventory.md %}) and the [Quest System]({{ site.baseurl }}{% link _PersonalProjects/2024-01-25-QuestSystem.md %}) which I designed and implemented to be able to integrate into any project. Making it generic also makes it easier to iterate and alter the functionality without breaking or bending the backend.     
 
-Self-Directed Project Management
+## Self-Directed Project Management
 
 As my own project manager, I embraced tools like Clickup for task organization and scheduling. Discord served as a primary communication platform, fostering collaboration and feedback loops throughout the development process. Planning the project was taken a lot more seriously compared to prior, as I have learnt from my past mistakes that my projects are often abandoned when I don't have a clear direction. Being able to say that I know a problem is present and have allotted time towards it as well as splitting up the project into achievable milestones had an insane boost to my motivation. 
 
-Outcome
+
+# Outcome
 
 Through this project, I deepened my understanding of networking protocols and version control systems, honing my technical skills as a developer. The experience also underscored the importance of self-directed project management, instilling a sense of autonomy and responsibility in my approach to future endeavors.
