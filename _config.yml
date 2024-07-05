@@ -32,10 +32,11 @@ youtube_url: "UC3vRLT5pJCbctTmoESVNYPw"
 linkedin_username: Paul Brown
 linkedin_url: paul-b-745268138
 
-remote_theme: tajacks/lightspeed
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-remote-theme
 future: true
 
 
