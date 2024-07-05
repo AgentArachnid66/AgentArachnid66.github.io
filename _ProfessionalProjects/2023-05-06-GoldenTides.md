@@ -3,6 +3,7 @@ layout: post
 title:  "Golden Tides"
 categories: UE5 C++ Multiplayer
 date: 06-05-2023
+thumbnail: "https://www.goldentides.gg/images/logo-secondary.png"
 regenerate: true
 ---
 

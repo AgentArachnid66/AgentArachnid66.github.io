@@ -17,12 +17,15 @@ open to a lot of different types of projects and am not afraid of approaching a 
 I'm still based in Bournemouth, but am open to relocation if the right role requires it. 
 
 ## Professional Projects
+
+<ul class="post-list">
 {% assign posts = site.ProfessionalProjects | sort: 'date' | reverse %}
   {% for post in posts %}
     <li>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
+            <img src="{{ post.thumbnail }}" />
           </a>
         </h3>
         {%- if site.show_excerpts -%}
@@ -61,6 +64,7 @@ communicate anything useful I have found to the wider community. I have even fou
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
+            <img src="{{ post.thumbnail }}" />
           </a>
         </h3>
         {%- if site.show_excerpts -%}

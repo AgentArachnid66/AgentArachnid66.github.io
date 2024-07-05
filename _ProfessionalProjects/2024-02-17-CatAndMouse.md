@@ -4,6 +4,7 @@ title:  Cat and Mouse
 categories: UE5 C++ Multiplayer
 date: 06-05-2023
 regenerate: true
+thumbnail: "https://img.itch.zone/aW1nLzE2NzU2ODM5LnBuZw==/original/SS%2Fe%2F9.png"
 ---
 
 Project Experience: Cat and Mouse
