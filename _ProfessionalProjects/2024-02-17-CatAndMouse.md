@@ -29,3 +29,7 @@ As my own project manager, I embraced tools like Clickup for task organization a
 # Outcome
 
 Through this project, I deepened my understanding of networking protocols and version control systems, honing my technical skills as a developer. The experience also underscored the importance of self-directed project management, instilling a sense of autonomy and responsibility in my approach to future endeavors.
+
+
+Project can be found here: https://spyderweb-studios.itch.io/project-cat-and-mouse
+Current Password: Sketchbook

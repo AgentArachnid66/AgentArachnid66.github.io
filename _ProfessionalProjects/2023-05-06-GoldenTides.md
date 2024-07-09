@@ -14,6 +14,6 @@ In my capacity as an Unreal Engineer, my primary objective was to architect and 
 
 Working alongside a cohort of exceptionally talented engineers proved to be an invaluable experience. Their mentorship provided me with insights and techniques that not only enriched my understanding of Unreal Engine but also expanded my problem-solving skills.
 
-Throughout the duration of Golden Tides, I immersed myself in the utilization of Perforce for version control. This exposure has since become an indispensable asset in my arsenal, seamlessly integrating into my workflow across subsequent personal projects.
+Throughout the duration of Golden Tides, I used Perforce for version control, and went from a complete novice to setting up my own Perforce Server for my own projects..
 
 [Golden Tides on Epic Games Store](https://store.epicgames.com/en-US/p/golden-tides-a4be8c)
