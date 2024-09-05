@@ -1,7 +1,6 @@
 +++
 title = 'Pervasive Gaming'
-date = 2024-09-05T11:50:57+01:00
-draft = true
+date = 2022-02-21T11:50:57+01:00
 +++
 
 

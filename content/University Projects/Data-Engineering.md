@@ -1,7 +1,6 @@
 +++
 title = 'Data Engineering'
-date = 2024-09-05T11:46:29+01:00
-draft = true
+date = 2023-09-05T11:46:29+01:00
 +++
 
 

@@ -1,7 +1,6 @@
 +++
 title = 'AUDL'
-date = 2024-09-05T14:27:36+01:00
-draft = true
+date = 2024-08-25T14:27:36+01:00
 +++
 
 # Role: Gameplay Developer at Ultix Technology

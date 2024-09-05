@@ -1,7 +1,6 @@
 +++
 title = 'Custom EQS Test'
-date = 2024-09-05T14:19:16+01:00
-draft = true
+date = 2023-05-16T14:19:16+01:00
 +++
 
 EQS (Environment Query System) is a powerful tool when making an AI in Unreal Engine. Creating your own EQS Tests can open the way

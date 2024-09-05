@@ -1,7 +1,6 @@
 +++
 title = 'Equine VR'
-date = 2024-09-05T10:58:17+01:00
-draft = true
+date = 2022-09-05T10:58:17+01:00
 +++
 
 # Equine VR
