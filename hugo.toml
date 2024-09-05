@@ -22,3 +22,8 @@ params.description = 'Lead Developer of Spyderweb Studios, and Multiplayer Techn
   name = "YouTube"
   url = "https://www.youtube.com/@agentarachnid2009"
 
+
+
+[module]
+  [[module.imports]]
+    path = 'https://github.com/vaga/hugo-theme-m10c'
