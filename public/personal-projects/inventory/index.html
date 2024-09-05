@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en-gb">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Multiplayer Inventory &amp; Crafting - Unreal Engine 5 // Agent Arachnids Anthology</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Paul Brown" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.5b1fcc8902588589c4767187402a3c29f8b8d7a6fdef6d9f8f77045bb0d14fee.css" />
+    
+
+    
+  
+
+
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Multiplayer Inventory & Crafting - Unreal Engine 5">
+  <meta name="twitter:description" content="I have been working on a project that involves an inventory and crafting system. I have been using Unreal Engine 5 and C&#43;&#43; to create this system.
+This system will need to be functional for multiplayer, easy to extend and easy to use. I have been using a lot of the built-in Unreal Engine features to make this system as robust as possible.
+I have integrated the systems into the Editor and made it easy to create new items and recipes.">
+
+    <meta property="og:url" content="http://localhost:1313/personal-projects/inventory/">
+  <meta property="og:site_name" content="Agent Arachnids Anthology">
+  <meta property="og:title" content="Multiplayer Inventory & Crafting - Unreal Engine 5">
+  <meta property="og:description" content="I have been working on a project that involves an inventory and crafting system. I have been using Unreal Engine 5 and C&#43;&#43; to create this system.
+This system will need to be functional for multiplayer, easy to extend and easy to use. I have been using a lot of the built-in Unreal Engine features to make this system as robust as possible.
+I have integrated the systems into the Editor and made it easy to create new items and recipes.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="personal-projects">
+    <meta property="article:published_time" content="2024-09-05T11:57:04+01:00">
+    <meta property="article:modified_time" content="2024-09-05T11:57:04+01:00">
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      
+      <span class="app-header-title">Agent Arachnids Anthology</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/personal-projects/">Personal Projects</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/professional-projects/">Professional Projects</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tutorials/">Tutorials</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/university-projects/">University Projects</a>
+      </nav>
+      <p>Lead Developer of Spyderweb Studios, and Multiplayer Technical Designer</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/agentarachnid66" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github Account</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://www.linkedin.com/in/paul-b-745268138/" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>LinkedIn</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg>
+          </a>
+        
+          <a href="https://www.youtube.com/@agentarachnid2009" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-youtube">
+  <title>YouTube</title>
+  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Multiplayer Inventory &amp; Crafting - Unreal Engine 5</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Sep 5, 2024
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          4 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>I have been working on a project that involves an inventory and crafting system. I have been using Unreal Engine 5 and C++ to create this system.</p>
+<p>This system will need to be functional for multiplayer, easy to extend and
+easy to use. I have been using a lot of the built-in Unreal Engine features
+to make this system as robust as possible.</p>
+<p>I have integrated the systems into the Editor and made it easy to create new items and recipes.</p>
+<p><img src="https://imgur.com/y2Hqti9.png" alt=""></p>
+<h2 id="inventory">Inventory</h2>
+<p>The Inventory System has been designed to be as easy to use, and easy to extend.
+You can extend the Inventory Component to add in as many additional features as
+you require and overwrite the functions provided to produce custom behaviour.</p>
+<p>It uses the FastArraySerializer to only replicate the data that has changed.
+To make working with this easier, I have created plenty of utility functions
+to use this feature.</p>
+<h3 id="inventory-system-features">Inventory System Features</h3>
+<ul>
+<li>Fully Replicated Inventory Component:
+<ul>
+<li>Feature Set:
+<ul>
+<li>Adding and Removing Items</li>
+<li>Transferring Items between Inventories</li>
+<li>Using Items</li>
+<li>Dropping Items</li>
+<li>Utility Functions to retrieve data about the current inventory and the current state of it</li>
+<li>Events for when the state of the inventory changes, that work on both Server and Client</li>
+<li>Function Library to expose common Utility functions that aren&rsquo;t natively supported.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Items:
+<ul>
+<li>Can be defined as individual assets, so can be loaded separately.</li>
+<li>Different Item Class for different behaviour</li>
+<li>Interfaces to retrieve information</li>
+<li>Separates the Inventory Items from the Actors, to lessen the network load whilst maintaining functionality</li>
+</ul>
+</li>
+</ul>
+<p>Items are their own Assets that can be created in the editor, and can be instantiated like a data asset.</p>
+<p>The base Item Class can be extended to add in additional functionality, such as:</p>
+<ul>
+<li>Gameplay Abilities</li>
+<li>Attribute Modifiers</li>
+<li>Crafting Recipes Unlock</li>
+</ul>
+<p>Below is an example of an Item that has a Gameplay Ability attached to it.</p>
+<p><img src="https://imgur.com/OwUw0Se.png" alt=""></p>
+<p>The Default section is where the Ability can be assigned. It was specialised as a
+BP child of the Item class, which is why the variables that should be hidden are visible.
+The Inventory Section is the Item Defaults that are used by the Inventory System for the UI
+and Inventory Management functionality.</p>
+<h3 id="crafting-system">Crafting System</h3>
+<p>The Crafting System has been designed to be as easy to use, and easy to extend.</p>
+<p>The Workflow for the crafting is as follows:</p>
+<ul>
+<li>Player Requests to Craft an Item via the Crafting Component</li>
+<li>The Crafting Component sends a request to a Recipe Management Component</li>
+<li>The Recipe Management Component checks if the player has the required items to craft the item
+and if the Player can craft the item</li>
+<li>If the Player can craft the item, the Recipe Management Component will remove the required items from the player&rsquo;s inventory</li>
+<li>Depending on the configuration, the Recipe Management Component will either give the player the crafted item or drop it into the world</li>
+</ul>
+<p>By separating the workflow up into these steps, it opens up the possibility to add in additional features such as:
+- Crafting Benches that have different crafting recipes to other Crafting tools
+- Player crafting recipes by themselves without the need for a crafting bench
+- Crafting recipes that require a certain crafting tool to be used
+- Crafting recipes that require a certain crafting bench to be used
+- Adding the item directly into the player&rsquo;s inventory or dropping it into the world on
+a per crafting table basis
+- Locking players out of recipes until they have reached a certain metric</p>
+<p>The Recipe Objects are defined as assets, so they can be loaded separately. This allows for easy extension and modification of the crafting system.</p>
+<p><img src="https://imgur.com/tslZjc5.png" alt=""></p>
+<p>The Recipe Object has a few different sections to it.
+The first section is the Recipe Ingredients, which is used by the Recipe Management Component to check if the player can craft the item.
+The second section is the Recipe Results, which is used to define what the player will receive when they craft the item.
+The third section is the Recipe UI, which is used to show the player what they can craft and what they need to craft it on the UI.</p>
+<p>With these two systems combined, it opens up a lot of possibilities for the game that I am working on. I am excited to see how this system will evolve as the project progresses.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This has got to be one of the most complex systems that I have worked on by myself and I cannot imagine that this is only going to be a portion
+of the systems that I will need to create for this project. I am excited to see how this system will evolve as the project progresses. I am also
+planning on releasing this as a solo plugin on the Unreal Engine Marketplace, and as part of a larger plugin that I am working on for Multiplayer
+RPGs. My next plugin will be a Quest System, which is another system that I have not worked on before. I am excited to see how that will turn out.</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

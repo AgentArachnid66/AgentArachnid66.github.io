@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en-gb">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Generic Wave Function Collapse - Unreal Engine 5 - C&#43;&#43; Implementation // Agent Arachnids Anthology</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Paul Brown" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.5b1fcc8902588589c4767187402a3c29f8b8d7a6fdef6d9f8f77045bb0d14fee.css" />
+    
+
+    
+  
+
+
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Generic Wave Function Collapse - Unreal Engine 5 - C&#43;&#43; Implementation">
+  <meta name="twitter:description" content="I knew that I wanted to implement a procedural algorithm for my latest project, and decided on creating a wave function collapse algorithm as it seemed like a good starting point for learning more advanced procedural algorithms. To add more challenge to this, I wasn’t using it for generating maps, or textures but instead wanted it to interact with choosing which items to spawn into the map based on a variety of factors that were not known when starting the implementation.">
+
+    <meta property="og:url" content="http://localhost:1313/personal-projects/wavefunctioncollapse/">
+  <meta property="og:site_name" content="Agent Arachnids Anthology">
+  <meta property="og:title" content="Generic Wave Function Collapse - Unreal Engine 5 - C&#43;&#43; Implementation">
+  <meta property="og:description" content="I knew that I wanted to implement a procedural algorithm for my latest project, and decided on creating a wave function collapse algorithm as it seemed like a good starting point for learning more advanced procedural algorithms. To add more challenge to this, I wasn’t using it for generating maps, or textures but instead wanted it to interact with choosing which items to spawn into the map based on a variety of factors that were not known when starting the implementation.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="personal-projects">
+    <meta property="article:published_time" content="2024-09-05T11:57:26+01:00">
+    <meta property="article:modified_time" content="2024-09-05T11:57:26+01:00">
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      
+      <span class="app-header-title">Agent Arachnids Anthology</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/personal-projects/">Personal Projects</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/professional-projects/">Professional Projects</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tutorials/">Tutorials</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/university-projects/">University Projects</a>
+      </nav>
+      <p>Lead Developer of Spyderweb Studios, and Multiplayer Technical Designer</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/agentarachnid66" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github Account</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://www.linkedin.com/in/paul-b-745268138/" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>LinkedIn</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg>
+          </a>
+        
+          <a href="https://www.youtube.com/@agentarachnid2009" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-youtube">
+  <title>YouTube</title>
+  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Generic Wave Function Collapse - Unreal Engine 5 - C&#43;&#43; Implementation</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Sep 5, 2024
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          8 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>I knew that I wanted to implement a procedural algorithm for my latest project, and decided on creating a wave function collapse algorithm as it seemed like a good starting point for learning more advanced procedural algorithms. To add more challenge to this, I wasn&rsquo;t using it for generating maps, or textures but instead wanted it to interact with choosing which items to spawn into the map based on a variety of factors that were not known when starting the implementation.</p>
+<p>Since I wanted this to be as extensible and useful as possible, I decided to implement it using an interface and the subsystem would hold an array of registered objects. Each UObject would handle how they would receive the propagation from the system, how they define their entropy and how they collapse.</p>
+<h2 id="basic-algorithm">Basic Algorithm</h2>
+<p>Each Node has an <strong>entropy</strong> value, this represents how many possible states that Node has. Whilst there is a Node in the graph that has an entropy greater than 1, we select a <strong>Node</strong> to collapse and then <strong>propagate that change</strong> to it&rsquo;s neighbours. These neighbours receive this change, compare it to it&rsquo;s own <strong>states</strong> and remove the states that are no longer possible with it&rsquo;s <strong>constraints</strong>. If a Node has an entropy of 0, then it no longer has any possible states. Depending on how you want to deal with this, you could either remove the Node or reset the wave function and try again.</p>
+<p>After a Neighbour Node has received the change and compared the states, the algorithm will calculate the difference in entropy and if it is greater than 1, it will be added to the queue to propagate. This is because if a state gets removed from a Node, it might have been the only state that made another Node&rsquo;s state possible. Therefore, it will need to be notify it&rsquo;s neighbours that the state has been removed.</p>
+<h2 id="interface">Interface</h2>
+<p>The IWaveFunctionNodeInterface forms the foundation for the Node based workflow that I intended this implementation to follow, being able to make any UObject influenced by the system, and not just Actors, opens up a lot more potential. As you could see from my other work, I really like to work in more generic terms that can be applied to a lot more different types of use cases.</p>
+<p>Here are the main functions in the interface</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	UFUNCTION(BlueprintNativeEvent, BlueprintAuthorityOnly, BlueprintCallable, Category <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wave Function Collapse&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> GetNeighbourNodes(TArray<span style="color:#f92672">&lt;</span>UObject<span style="color:#f92672">*&gt;&amp;</span> OutNeighbourNodes) <span style="color:#66d9ef">const</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	UFUNCTION(BlueprintNativeEvent, BlueprintAuthorityOnly, BlueprintCallable, Category <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wave Function Collapse&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> GetEntropy() <span style="color:#66d9ef">const</span>;
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	UFUNCTION(BlueprintNativeEvent, BlueprintAuthorityOnly, BlueprintCallable, Category <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wave Function Collapse&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> GetPossibleStates(TArray<span style="color:#f92672">&lt;</span>TSoftObjectPtr<span style="color:#f92672">&lt;</span>UWFC_StatePrimaryDataAsset<span style="color:#f92672">&gt;&gt;&amp;</span> OutPossibleStates) <span style="color:#66d9ef">const</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	UFUNCTION(BlueprintNativeEvent, BlueprintAuthorityOnly, Category <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wave Function Collapse&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> ReceiveNodePropagation(<span style="color:#66d9ef">const</span> UObject<span style="color:#f92672">*</span> PropagatedNode);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	UFUNCTION(BlueprintNativeEvent, BlueprintAuthorityOnly, Category <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wave Function Collapse&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> CollapseNode();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	UFUNCTION(BlueprintNativeEvent, BlueprintAuthorityOnly, Category <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wave Function Collapse&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> PostWaveFunctionCollapse();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	UFUNCTION(BlueprintNativeEvent, BlueprintAuthorityOnly, Category <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wave Function Collapse&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> ResetNode();
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h2 id="subsystem">Subsystem</h2>
+<p>I decided on a World Subsystem to form the basis for the implementation, because it made it the most sense for the intended use. Being able to register actors as Nodes to collapse, as well as being able to spawn in actors and managed lifetime it was the best choice. I could have gone for an Info Actor (similar to a Game Mode, or State) but I wanted to be able to access it from any actor without performing a GetActorOfClass operation.</p>
+<p>After all of the Nodes have been registered, we can trigger then collapse:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> UWaveFunctionCollapseSubsystem<span style="color:#f92672">::</span>CollapseWaveFunction()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Reset the wave function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	ResetWaveFunction();
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;Collapsing Wave Function&#34;</span>));
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// While there are nodes to collapse
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">int</span> Iteration <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">while</span>(Iteration <span style="color:#f92672">&lt;</span> WFC_MAX_COLLAPSE_ITERATIONS <span style="color:#f92672">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span>	RegisteredNodes.ContainsByPredicate([](<span style="color:#66d9ef">const</span> FWFC_Node<span style="color:#f92672">&amp;</span> RegisteredNode)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> IWaveFunctionNodeInterface<span style="color:#f92672">::</span>Execute_GetEntropy(RegisteredNode.Node) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>	}))
+</span></span></code></pre></div><p>For the conditions for the <code>while loop</code>, I needed to first ensure that this wouldn&rsquo;t result in an infinite loop so a basic Iteration counter with a hard coded Macro seemed like a good solution for experimenting with this concept. The second condition checks if any of the Nodes have an Entropy greater than 1, but it will return on the first instance of this. A potential optimisation here would be to cache the value when calculated in main body of the algorithm.</p>
+<p>In the first part of the loop, we first retrieve the Node with the lowest entropy. We want to this one because we are less likely to pick a state that will invalidate more states when propagated. If the index is not a valid index, we break out of the while loop.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;Iteration: [%d]&#34;</span>), Iteration);
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// Select a random node to collapse
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> NodeIndex <span style="color:#f92672">=</span> GetLowestEntropyNodeIndex();
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>RegisteredNodes.IsValidIndex(NodeIndex))
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;Invalid Node Index: %d&#34;</span>), NodeIndex);
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		
+</span></span></code></pre></div><p>To get the Node with the lowest entropy, it is a simple iteration over the RegisteredNodes array. I filtered out Nodes
+that have an entropy greater than 1. If it had 0-1, then it either is completely invalidated or has collapsed to one state,
+so not valid candidates.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> LowestEntropyNodeIndex <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> LowestEntropy <span style="color:#f92672">=</span> TNumericLimits<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;::</span>Max();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> RegisteredNodes.Num(); i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">&amp;</span> Entropy <span style="color:#f92672">=</span> IWaveFunctionNodeInterface<span style="color:#f92672">::</span>Execute_GetEntropy(RegisteredNodes[i].Node);
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span>(Entropy <span style="color:#f92672">&lt;</span> LowestEntropy <span style="color:#f92672">&amp;&amp;</span> Entropy <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			LowestEntropy <span style="color:#f92672">=</span> Entropy;
+</span></span><span style="display:flex;"><span>			LowestEntropyNodeIndex <span style="color:#f92672">=</span> i;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> LowestEntropyNodeIndex;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Continuing on with the main algorithm, it is rather simple. Collapsing the Node by the Index that was just retrieved,
+and then create a new Queue of Node Indexes and propagate the change.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>		UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;Selected Node: %s&#34;</span>), <span style="color:#f92672">*</span>GetNameSafe(RegisteredNodes[NodeIndex].Node));
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// Collapse the node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">if</span>(CollapseNode(NodeIndex))
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            TQueue<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> PropagationQueue;
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Propagate the wave function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;Propagating Wave Function&#34;</span>));
+</span></span><span style="display:flex;"><span>            PropagateWaveFunction(NodeIndex, PropagationQueue);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">++</span>Iteration;
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div><p>Collapsing the Node is quite easy, thanks to the interface each Node can be responsible for their own collapse.
+To check if the collapse was successful, there is verification that the entropy is within expected ranges.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> UWaveFunctionCollapseSubsystem<span style="color:#f92672">::</span>CollapseNode(<span style="color:#66d9ef">int</span> NodeIndex)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;Collapsing Node: %s&#34;</span>), <span style="color:#f92672">*</span>GetNameSafe(RegisteredNodes[NodeIndex].Node));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Collapse the node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	IWaveFunctionNodeInterface<span style="color:#f92672">::</span>Execute_CollapseNode(RegisteredNodes[NodeIndex].Node);
+</span></span><span style="display:flex;"><span>	UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;Node Collapsed: %s&#34;</span>), <span style="color:#f92672">*</span>GetNameSafe(RegisteredNodes[NodeIndex].Node));
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> IWaveFunctionNodeInterface<span style="color:#f92672">::</span>Execute_GetEntropy(RegisteredNodes[NodeIndex].Node) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The propagation has a lot of checks but at the basic level, it retrieves the Neighbour Nodes, performs
+some checks on them, propagates the Node to them and then calculate the difference in entropy. Only if the Neighbour Node
+has successfully passed all of these checks, will they then be added to the Propagation Queue.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> UWaveFunctionCollapseSubsystem<span style="color:#f92672">::</span>PropagateWaveFunction(<span style="color:#66d9ef">int</span> NodeIndex, TQueue<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> PropagationQueue)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Retrieve the node&#39;s neighbours
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	TArray<span style="color:#f92672">&lt;</span>UObject<span style="color:#f92672">*&gt;</span> Neighbours;
+</span></span><span style="display:flex;"><span>	IWaveFunctionNodeInterface<span style="color:#f92672">::</span>Execute_GetNeighbourNodes(RegisteredNodes[NodeIndex].Node, Neighbours);
+</span></span><span style="display:flex;"><span>	UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;Retrieved Neighbours: %d&#34;</span>), Neighbours.Num());
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Iterate through the neighbours
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> Neighbours.Num(); i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// Check if the Object is valid
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>IsValid(Neighbours[i]))
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;Invalid Neighbour: %s&#34;</span>), <span style="color:#f92672">*</span>GetNameSafe(Neighbours[i]));
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">&amp;</span> NeighbourEntropy <span style="color:#f92672">=</span> IWaveFunctionNodeInterface<span style="color:#f92672">::</span>Execute_GetEntropy(Neighbours[i]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// Check if they have been collapsed already
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">if</span>(NeighbourEntropy <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;Neighbour already collapsed: %s&#34;</span>), <span style="color:#f92672">*</span>GetNameSafe(Neighbours[i]));
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// Propagate the wave function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		IWaveFunctionNodeInterface<span style="color:#f92672">::</span>Execute_ReceiveNodePropagation(Neighbours[i], RegisteredNodes[NodeIndex].Node);
+</span></span><span style="display:flex;"><span>		UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;Propagating Wave Function to Neighbour: %s&#34;</span>), <span style="color:#f92672">*</span>GetNameSafe(Neighbours[i]));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// If the Entropy is the same, then we can safely skip this node
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">if</span>(NeighbourEntropy <span style="color:#f92672">==</span> IWaveFunctionNodeInterface<span style="color:#f92672">::</span>Execute_GetEntropy(Neighbours[i]))
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;Neighbour Entropy is the same: %s&#34;</span>), <span style="color:#f92672">*</span>GetNameSafe(Neighbours[i]));
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// Add the neighbour to the propagation queue
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		PropagationQueue.Enqueue(RegisteredNodes.Find(FWFC_Node(Neighbours[i])));
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Recursively propagate the wave function
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">while</span>(PropagationQueue.Dequeue(NodeIndex))
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;Propagating Wave Function: %s&#34;</span>), <span style="color:#f92672">*</span>GetNameSafe(RegisteredNodes[NodeIndex].Node));
+</span></span><span style="display:flex;"><span>		PropagateWaveFunction(NodeIndex, PropagationQueue);
+</span></span><span style="display:flex;"><span>		UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;Wave Function Propagated: %s&#34;</span>), <span style="color:#f92672">*</span>GetNameSafe(RegisteredNodes[NodeIndex].Node));
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">++</span>PropagationCount;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Finally, after the main while loop has completed, there is one final iteration through the
+Registered Nodes. This is to perform any cleanup that the Nodes will need to do, as well as ensure that each Node
+can receive a notification when the collapse has completed.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> RegisteredNodes.Num(); i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		IWaveFunctionNodeInterface<span style="color:#f92672">::</span>Execute_PostWaveFunctionCollapse(RegisteredNodes[i].Node);
+</span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div><h2 id="state-and-constraints">State and Constraints</h2>
+<p>To represent the State, I used a Primary Data Asset as my base. The base class just contains an array of constraint objects.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	UPROPERTY(EditAnywhere, BlueprintReadOnly, Instanced, Category <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wave Function Collapse&#34;</span>)
+</span></span><span style="display:flex;"><span>	TArray<span style="color:#f92672">&lt;</span>UWFC_ConstraintObject<span style="color:#f92672">*&gt;</span> Constraints;
+</span></span></code></pre></div><p>They also hold two functions, to validate themselves against other states</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> UWFC_StatePrimaryDataAsset<span style="color:#f92672">::</span>IsStatePossible(<span style="color:#66d9ef">const</span> UWFC_StatePrimaryDataAsset<span style="color:#f92672">*</span> OtherState,
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> UObject<span style="color:#f92672">*</span> SourceNode, <span style="color:#66d9ef">const</span> UObject<span style="color:#f92672">*</span> TargetNode) <span style="color:#66d9ef">const</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Need to see if any of the constraints are violated
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> UWFC_ConstraintObject<span style="color:#f92672">*</span> Constraint : Constraints)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>Constraint<span style="color:#f92672">-&gt;</span>AreStatesCompatible(<span style="color:#66d9ef">this</span>, OtherState))
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;State [%s] is not possible with [%s]&#34;</span>), <span style="color:#f92672">*</span>GetNameSafe(<span style="color:#66d9ef">this</span>), <span style="color:#f92672">*</span>GetNameSafe(OtherState));
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> false;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>Constraint<span style="color:#f92672">-&gt;</span>AreNodeStatesCompatible(<span style="color:#66d9ef">this</span>, OtherState, SourceNode, TargetNode))
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;Node State [%s] is not possible with [%s]&#34;</span>), <span style="color:#f92672">*</span>GetNameSafe(<span style="color:#66d9ef">this</span>), <span style="color:#f92672">*</span>GetNameSafe(OtherState));
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> false;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> UWFC_StatePrimaryDataAsset<span style="color:#f92672">::</span>IsStatePossibleWithOthers(<span style="color:#66d9ef">const</span> TArray<span style="color:#f92672">&lt;</span>TSoftObjectPtr<span style="color:#f92672">&lt;</span>UWFC_StatePrimaryDataAsset<span style="color:#f92672">&gt;&gt;&amp;</span> OtherStates,
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> UObject<span style="color:#f92672">*</span> SourceNode, <span style="color:#66d9ef">const</span> UObject<span style="color:#f92672">*</span> TargetNode) <span style="color:#66d9ef">const</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;Checking if [%s] is possible with others&#34;</span>), <span style="color:#f92672">*</span>GetNameSafe(<span style="color:#66d9ef">this</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Need to see if any of the other states are possible
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> TSoftObjectPtr<span style="color:#f92672">&lt;</span>UWFC_StatePrimaryDataAsset<span style="color:#f92672">&gt;&amp;</span> OtherState : OtherStates)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">const</span> UWFC_StatePrimaryDataAsset<span style="color:#f92672">*</span> OtherStatePtr <span style="color:#f92672">=</span> OtherState.LoadSynchronous();
+</span></span><span style="display:flex;"><span>		
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span>(IsStatePossible(OtherStatePtr, SourceNode, TargetNode))
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;State [%s] is possible with [%s]&#34;</span>), <span style="color:#f92672">*</span>GetNameSafe(<span style="color:#66d9ef">this</span>), <span style="color:#f92672">*</span>GetNameSafe(OtherState.Get()));
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	UE_LOG(LogTemp, Warning, TEXT(<span style="color:#e6db74">&#34;No possible states found&#34;</span>));
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> false;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This was a pitfall that I ran into, where I was checking to see if any states violated the current state in the <code>IsStatePossibleWithOthers</code> function. That wasn&rsquo;t the intended purpose of this function, as it controlled if the state was removed from the valid possibilities on the Node. I realised I needed to check if it was possible with any of the other States on a Node rather than with all of them.</p>
+<p>Constraints have a single purpose which is to validate if two states are compatible. Some states can be dependent on traits only accessed via the Node that they are
+associated with such as their world location.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	UFUNCTION(BlueprintNativeEvent, BlueprintAuthorityOnly, BlueprintCallable, Category <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wave Function Collapse&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">bool</span> AreStatesCompatible(<span style="color:#66d9ef">const</span> UWFC_StatePrimaryDataAsset<span style="color:#f92672">*</span> StateA, <span style="color:#66d9ef">const</span> UWFC_StatePrimaryDataAsset<span style="color:#f92672">*</span> StateB) <span style="color:#66d9ef">const</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	UFUNCTION(BlueprintNativeEvent, BlueprintAuthorityOnly, BlueprintCallable, Category <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wave Function Collapse&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">bool</span> AreNodeStatesCompatible(<span style="color:#66d9ef">const</span> UWFC_StatePrimaryDataAsset<span style="color:#f92672">*</span> StateA, <span style="color:#66d9ef">const</span> UWFC_StatePrimaryDataAsset<span style="color:#f92672">*</span> StateB, <span style="color:#66d9ef">const</span> UObject<span style="color:#f92672">*</span> NodeA, <span style="color:#66d9ef">const</span> UObject<span style="color:#f92672">*</span> NodeB) <span style="color:#66d9ef">const</span>;
+</span></span></code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

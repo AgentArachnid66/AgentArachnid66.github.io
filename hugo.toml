@@ -1,0 +1,24 @@
+baseURL = 'https://agentarachnid66.github.io'
+languageCode = 'en-gb'
+title = 'Agent Arachnids Anthology'
+theme = 'm10c'
+sectionPagesMenu = 'main'
+
+params.author = 'Paul Brown'
+params.description = 'Lead Developer of Spyderweb Studios, and Multiplayer Technical Designer'
+
+[[params.social]]
+  icon = "github"
+  name = "Github Account"
+  url = "https://github.com/agentarachnid66"
+
+[[params.social]]
+  icon = "linkedin"
+  name = "LinkedIn"
+  url = "https://www.linkedin.com/in/paul-b-745268138/"
+
+[[params.social]]
+  icon = "youtube"
+  name = "YouTube"
+  url = "https://www.youtube.com/@agentarachnid2009"
+

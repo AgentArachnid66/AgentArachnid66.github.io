@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en-gb">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Optimisation // Agent Arachnids Anthology</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Paul Brown" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.5b1fcc8902588589c4767187402a3c29f8b8d7a6fdef6d9f8f77045bb0d14fee.css" />
+    
+
+    
+  
+
+
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Optimisation">
+  <meta name="twitter:description" content="Unreal Engine Optimisation Optimisation in Unreal Engine has a few different aspects to it, from optimising the code to optimising the assets. This tutorial will cover some of the ways you can optimise your Unreal Engine project to improve performance.
+First thing to keep in mind is that this is going to cover generic optimisation as each project is different and may require different optimisation techniques.
+Unreal Insights Unreal Insights is a tool that can help you identify performance issues in your project.">
+
+    <meta property="og:url" content="http://localhost:1313/tutorials/optimisation/">
+  <meta property="og:site_name" content="Agent Arachnids Anthology">
+  <meta property="og:title" content="Optimisation">
+  <meta property="og:description" content="Unreal Engine Optimisation Optimisation in Unreal Engine has a few different aspects to it, from optimising the code to optimising the assets. This tutorial will cover some of the ways you can optimise your Unreal Engine project to improve performance.
+First thing to keep in mind is that this is going to cover generic optimisation as each project is different and may require different optimisation techniques.
+Unreal Insights Unreal Insights is a tool that can help you identify performance issues in your project.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="tutorials">
+    <meta property="article:published_time" content="2024-09-05T14:19:50+01:00">
+    <meta property="article:modified_time" content="2024-09-05T14:19:50+01:00">
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      
+      <span class="app-header-title">Agent Arachnids Anthology</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/personal-projects/">Personal Projects</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/professional-projects/">Professional Projects</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tutorials/">Tutorials</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/university-projects/">University Projects</a>
+      </nav>
+      <p>Lead Developer of Spyderweb Studios, and Multiplayer Technical Designer</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/agentarachnid66" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github Account</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://www.linkedin.com/in/paul-b-745268138/" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>LinkedIn</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg>
+          </a>
+        
+          <a href="https://www.youtube.com/@agentarachnid2009" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-youtube">
+  <title>YouTube</title>
+  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Optimisation</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Sep 5, 2024
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          9 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h1 id="unreal-engine-optimisation">Unreal Engine Optimisation</h1>
+<p>Optimisation in Unreal Engine has a few different aspects to it, from optimising the code to optimising the assets. This tutorial will cover some of the ways you can optimise your Unreal Engine project to improve performance.</p>
+<p>First thing to keep in mind is that this is going to cover generic optimisation as each project is different and may require different optimisation techniques.</p>
+<h2 id="unreal-insights">Unreal Insights</h2>
+<p>Unreal Insights is a tool that can help you identify performance issues in your project.
+It provides a range of different metrics that can help you identify where performance bottlenecks are occurring.
+You can use this tool to identify areas of your project that need optimisation.</p>
+<p>It is the main tool that should be used to optimise, benchmark and profile your project and can even be used with packaged builds.</p>
+<h3 id="how-to-use-unreal-insights-in-the-editor">How to use Unreal Insights in the Editor</h3>
+<p>To open Unreal Insights in the Editor, navigate to the bottom of the window and click on the Insights tab.
+<img src="https://imgur.com/5PuA3fg.png" alt=""></p>
+<p>From here, you can configure Insights to give you the information that you need. I&rsquo;d recommend enabling &ldquo;Open Live Session On Trace Start&rdquo; so the
+window with the data will open automatically when you start a trace.</p>
+<p>To start a trace simply press this button here:
+<img src="https://imgur.com/TD1Z4xS.png" alt=""></p>
+<h3 id="how-to-use-unreal-insights-in-a-packaged-build">How to use Unreal Insights in a Packaged Build</h3>
+<p>To use Unreal Insights in a packaged build, you need to make a shortcut to the packaged build and add the following command line arguments:
+-trace=default</p>
+<p><img src="https://imgur.com/zAzRumb.png" alt=""></p>
+<p>This will create a trace file which you can open in the Session Browser.</p>
+<h3 id="session-browser">Session Browser</h3>
+<p>To open the Session Browser, navigate to the Insights section and click on the Session Browser button.
+<img src="https://imgur.com/eqBWd1i.png" alt=""></p>
+<p>You can also open from the file explorer by navigating to the Binaries folder.
+<img src="https://imgur.com/DdFIVI1.png" alt=""></p>
+<p>From here you can open the trace file that you created and view the data.
+<img src="https://imgur.com/RtopqfR.png" alt=""></p>
+<p>Now, you can use this data to identify performance bottlenecks in your project and optimise them. After all of this setup, this is the relatively easy part
+as Unreal Insights will give you a lot of information on what is causing performance issues.</p>
+<p>I will be using one of my projects to show you how to use Unreal Insights to identify performance issues and optimise them.</p>
+<p>I played through my Dev Testing map, interacting with a few of my systems to see if I can identify any performance issues.</p>
+<p><img src="https://imgur.com/aqaZTWc.png" alt=""></p>
+<p>For the most part, the FPS is stable around 60fps but there are a few spikes. Let&rsquo;s zoom in on one of them:</p>
+<p><img src="https://imgur.com/IK88yG7.png" alt=""></p>
+<p>So you can see that the frame took around 24ms, rather than our target of 16ms. This is a good place to start looking for performance issues.
+Insights provides us with a stack trace of what is being called on that frame, and how long it took.</p>
+<p>Looking at the information, it looks like the issue is coming from the loading of the Data Asset when attempting to add the Clue to the Clue Manager.</p>
+<p>From that, I looked at the code and found the first suspect:
+<code>const UCluePrimaryDataAsset* LoadedClue = ClueToAdd.LoadSynchronous();</code></p>
+<p>This will load the Data Asset synchronously, which can cause performance issues as it will not only load the data on the same frame, but will also block the thread until it is loaded.
+I changed this to load asynchronously and the performance improved. I used <a href="https://github.com/landelare/ue5coro">UE5 Coro</a> to easily add in the coroutine to load it in.</p>
+<h2 id="networking-profiling">Networking Profiling</h2>
+<p>When making a multiplayer game, it is important to profile the networking to ensure that it is not causing broadwidth or performance issues.
+Making sure that the networking is optimised can reduce multiplayer bugs such as lag and desync.</p>
+<h3 id="how-to-profile-networking">How to profile Networking</h3>
+<p>To open the Network Profiler, you need to open the console and type in the following command:</p>
+<ul>
+<li><code>networkprofile</code> to toggle the recording</li>
+<li><code>networkprofile start</code> to start the recording</li>
+<li><code>networkprofile stop</code> to stop the recording</li>
+</ul>
+<p>To view this data, you need to open up the Network Profiler window which can exclusively be opened in the File Explorer.
+<img src="https://imgur.com/H6GIMCy.png" alt=""></p>
+<p>After recording the data, you can view it by navigating to the {GameProjectFolder}/Saved/Profiling folder
+<img src="https://imgur.com/IKtPzSO.png" alt=""></p>
+<p>After opening up the file, you can see the data that was recorded. This can help you identify any networking issues that may be causing performance issues in your project.
+<img src="https://imgur.com/rWxhGpw.png" alt="">
+<img src="https://imgur.com/elp9iOD.png" alt=""></p>
+<p>There is a spike in the outgoing bandwidth, but the outgoing bandwidth is on average 6KB/s, which is within acceptable range for my project.</p>
+<p>As the project grows and more features are added, it is important to keep an eye on the networking to ensure that it is not causing performance issues.</p>
+<h2 id="optimisation-tips">Optimisation Tips</h2>
+<h3 id="general-optimisation-tip">General Optimisation Tip</h3>
+<h4 id="tsoftobjectptr-vs-rawtobjectptr">TSoftObjectPtr vs Raw/TObjectPtr</h4>
+<p>Soft Object Ptrs are recommended for data that is not needed immediately, as they are more efficient than Raw/TObjectPtrs. This difference is even more apparent with blueprint
+as when you use normal pointers (hard references), when that blueprint is loaded it will also load in all of the hard references as well. This can cause a massive cascading
+effect which will result in your blueprint being significantly heavier than it needs to be. Simply converting these hard references to soft object pointers can reduce the
+size of your class but can cause issues if the object is not loaded in when you need it.</p>
+<p>Things that can affect the size of the blueprint with hard references:</p>
+<ul>
+<li>Variables</li>
+<li>Casting</li>
+<li>Selecting the Class in a dropdown (Create Widget, Spawn Actor, etc)</li>
+</ul>
+<h4 id="avoiding-tick">Avoiding Tick</h4>
+<p>Avoid using Tick when possible, as it can cause performance issues. Instead, use Timers or Events to update your Actors.
+Alternatively, you could also change the Tick Interval to be less frequent if you need to use Tick, or toggle the tick on and off when needed.</p>
+<p>On modern hardware, this advice is less relevant as the performance impact of Tick is less than it used to be, but it is still good practice to avoid using Tick when possible.
+This is especially true if you are targeting lower-end hardware, or trying to build scalable systems.</p>
+<p>If you find yourself updating a lot of actors that are doing the same things, I would recommend looking into Mass which is UE&rsquo;s Entity Component System.</p>
+<h4 id="observer-pattern">Observer Pattern</h4>
+<p>Unreal allows you to use the Observer Pattern to reduce the number of calls you need to make to update your Actors by creating event delegates.</p>
+<p>This can be useful when you have a lot of Actors that need to be updated when something happens, as it reduces the number of calls you need to make to update them and avoids
+the need to use Tick and references.</p>
+<p>In C++, it is really easy to define an event:
+<code>DECLARE_DYNAMIC_MULTICAST_DELEGATE_xPARAM()</code> where x is the number of parameters you want to pass in.</p>
+<p>DYNAMIC means that you can bind to it, well dynamically. You can add a listener by getting the delegate and calling AddDynamic or AddUniqueDynamic and
+it will call the function when the event is triggered. Without DYNAMIC, you can still bind to it by calling BindUFunction, BindUObject, etc.</p>
+<p>MULTICAST is required for the event to be able to call multiple functions at once, including blueprint.</p>
+<p>The final part of this is the _PARAM which is the parameters that you want to pass in. You can pass in any number of parameters, but you can only pass in up to 8 parameters.</p>
+<p>An example of this would be:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnClueAdded, <span style="color:#66d9ef">const</span> UCluePrimaryDataAsset<span style="color:#f92672">*</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AClueManager</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> AActor
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  GENERATED_BODY()
+</span></span><span style="display:flex;"><span>  UPROPERTY(BlueprintAssignable, Category <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Clue Manager&#34;</span>)
+</span></span><span style="display:flex;"><span>  FOnClueAdded OnClueAdded;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="object-channels">Object Channels</h4>
+<p>When you have a collision (say for interacting) that is attached or nested within another actor, you can use Object Channels to ignore the collision of any actor that
+it does not need to know about. This can reduce the number of collision checks that are being made and improve performance.</p>
+<p>To set up Object Channels, you need to go to the Project Settings and navigate to the Collision section.
+From here, you can add a new Object Channel and set up the collision settings for it.</p>
+<p><img src="https://imgur.com/stIkgsx.png" alt=""></p>
+<p>After setting up the Object Channel, you can use it in the Collision settings of your Actors to ignore the collision of other Actors that are not needed.</p>
+<p>This is the settings for the interaction collider connected to the player:
+<img src="https://imgur.com/t8URAb2.png" alt=""></p>
+<p>It will only look for the Interact Object type, so when we want to add in a new Interactable object, we need to ensure that it&rsquo;s collider is set to the Interact Object type.</p>
+<p><img src="https://imgur.com/duA09Pn.png" alt=""></p>
+<h3 id="networking-optimisation">Networking Optimisation</h3>
+<h4 id="fast-arrays-vs-tarrays">Fast Arrays vs TArrays</h4>
+<p>The first tip I&rsquo;d like to give is to use Fast Arrays instead of TArrays when possible.
+Fast Arrays are more efficient than TArrays for networking performance as they only replicate the data that has changed rather than the entire array.</p>
+<p>They are a bit more complex to work with than normal TArrays, as you have to mark the elements as dirty after changing them, but they are worth it for the performance benefits.</p>
+<h4 id="replication-conditions-and-net-update-frequency">Replication Conditions and Net Update Frequency</h4>
+<p>Another tip is to use Replication Conditions to only replicate data when it is needed. For example,
+if you have a variable that is only needed on the Owning Actor, then you can use a Replication Condition to only replicate it to the Owning Actor.</p>
+<p>Another tip is to use the correct NetUpdateFrequency for your Actor. If you are anticipating the variables on an actor to change frequently, then you should set the NetUpdateFrequency to be higher. Otherwise, it should be lower.</p>
+<h4 id="limiting-rpcs">Limiting RPCs</h4>
+<p>RPCs can be expensive, especially if they are being called frequently. You can reduce the number of RPCs being called by utilising Replicated Variables rather than
+calling Client RPCs and by batching RPCs together.</p>
+<p>You can reduce the cost of RPCs by reducing the amount of data being sent over. One thing you can do here is infer information based on other information given. For example,
+you don&rsquo;t need to pass in a boolean to say if an item can stack if you send over an integer with the stack size. We can infer if it can stack based on if this integer
+is greater than 1. This may be a small example, saving an entire byte per RPC call, but it can add up especially if this RPC would be called often.</p>
+<p>Another way you could reduce the frequency of RPCs is by throttling them.
+If you have a system that is calling RPCs frequently, you could throttle them so that they are only called every x seconds or when a certain condition is met. A good example
+of when this would be necessary is for our interaction system, where we could reasonably expect some players to spam the interaction button. If we called the RPC everytime
+that button was pressed, it would be a lot of RPCs. Instead, we could throttle it so that it is only called every x seconds or when the interaction button is released.</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

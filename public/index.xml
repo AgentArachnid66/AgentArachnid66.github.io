@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Agent Arachnids Anthology</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Agent Arachnids Anthology</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 05 Sep 2024 14:27:52 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unannounced</title>
+      <link>http://localhost:1313/professional-projects/unannounced/</link>
+      <pubDate>Thu, 05 Sep 2024 14:27:52 +0100</pubDate>
+      <guid>http://localhost:1313/professional-projects/unannounced/</guid>
+      <description>This project is yet to be announced, but since it is my own project I&amp;rsquo;m more than happy and able to share about my involvement.&#xA;Role: Lead Developer In this personal project, I’ve taken on multiple roles, including programmer, designer, modeller, and project manager. Over the past year, I have been dedicated to creating a social deduction game set in Victorian London, inspired by titles like Among Us. As the sole developer, I’ve been responsible for building every aspect of the game, with a strong focus on technical implementation.</description>
+    </item>
+    <item>
+      <title>GoldenTides</title>
+      <link>http://localhost:1313/professional-projects/goldentides/</link>
+      <pubDate>Thu, 05 Sep 2024 14:27:41 +0100</pubDate>
+      <guid>http://localhost:1313/professional-projects/goldentides/</guid>
+      <description>Role: Unreal Engineer In my role as an Unreal Engineer for Golden Tides, I was tasked with designing and implementing code to meet both technical requirements and gameplay goals. A primary focus was ensuring that the code could scale effectively and maintain functionality within multiplayer environments. Although I had limited prior experience with networking in Unreal Engine, I embraced this challenge, growing significantly as a developer throughout the project.&#xA;Multiplayer Networking Despite being new to Unreal Engine&amp;rsquo;s networking systems at the start, I quickly adapted and implemented multiplayer features that supported seamless gameplay.</description>
+    </item>
+    <item>
+      <title>AUDL</title>
+      <link>http://localhost:1313/professional-projects/audl/</link>
+      <pubDate>Thu, 05 Sep 2024 14:27:36 +0100</pubDate>
+      <guid>http://localhost:1313/professional-projects/audl/</guid>
+      <description>Role: Gameplay Developer at Ultix Technology In my role at Ultix Technology, I have been instrumental in the development of key gameplay systems, focusing on both single-player and multiplayer functionality. By balancing technical precision and creativity, I ensure seamless user experiences across different game modes. My expertise extends beyond development, enabling me to lead and mentor team members on best practices and innovative approaches in Unreal Engine.&#xA;Unreal Engine (C++ and Blueprints) I utilize both C++ and Unreal Engine Blueprints, allowing me to optimize the workflow and accelerate design iteration.</description>
+    </item>
+    <item>
+      <title>Optimisation</title>
+      <link>http://localhost:1313/tutorials/optimisation/</link>
+      <pubDate>Thu, 05 Sep 2024 14:19:50 +0100</pubDate>
+      <guid>http://localhost:1313/tutorials/optimisation/</guid>
+      <description>Unreal Engine Optimisation Optimisation in Unreal Engine has a few different aspects to it, from optimising the code to optimising the assets. This tutorial will cover some of the ways you can optimise your Unreal Engine project to improve performance.&#xA;First thing to keep in mind is that this is going to cover generic optimisation as each project is different and may require different optimisation techniques.&#xA;Unreal Insights Unreal Insights is a tool that can help you identify performance issues in your project.</description>
+    </item>
+    <item>
+      <title>Custom Target.cs files and why you should use them</title>
+      <link>http://localhost:1313/tutorials/target_cs/</link>
+      <pubDate>Thu, 05 Sep 2024 14:19:39 +0100</pubDate>
+      <guid>http://localhost:1313/tutorials/target_cs/</guid>
+      <description>Background For my current project, I&amp;rsquo;ve implemented EOS and EOSPlus so I can support crossplay and have an easy multiplayer solution. The main problem I&amp;rsquo;ve been facing recently though was the ability to target both EOS and Steam independently from each other, and without altering the Config/DefaultEngine.ini directly each time I wanted to make a build for each storefront.&#xA;As they use the same Platform (Windows, Linux, Mac, etc), I couldn&amp;rsquo;t easily rely on Platform Configs.</description>
+    </item>
+    <item>
+      <title>Custom EQS Test</title>
+      <link>http://localhost:1313/tutorials/custom-eqs-test/</link>
+      <pubDate>Thu, 05 Sep 2024 14:19:16 +0100</pubDate>
+      <guid>http://localhost:1313/tutorials/custom-eqs-test/</guid>
+      <description>EQS (Environment Query System) is a powerful tool when making an AI in Unreal Engine. Creating your own EQS Tests can open the way for more advanced interactions and more intelligent decision making.&#xA;In this tutorial, we will be making an EQS Test that can get a value from an actor using an interface.&#xA;EQS Test We will start by making a C++ Class:&#xA;Expand out the All Actors and search for EnvQueryTest</description>
+    </item>
+    <item>
+      <title>Generic Wave Function Collapse - Unreal Engine 5 - C&#43;&#43; Implementation</title>
+      <link>http://localhost:1313/personal-projects/wavefunctioncollapse/</link>
+      <pubDate>Thu, 05 Sep 2024 11:57:26 +0100</pubDate>
+      <guid>http://localhost:1313/personal-projects/wavefunctioncollapse/</guid>
+      <description>I knew that I wanted to implement a procedural algorithm for my latest project, and decided on creating a wave function collapse algorithm as it seemed like a good starting point for learning more advanced procedural algorithms. To add more challenge to this, I wasn&amp;rsquo;t using it for generating maps, or textures but instead wanted it to interact with choosing which items to spawn into the map based on a variety of factors that were not known when starting the implementation.</description>
+    </item>
+    <item>
+      <title>Multiplayer Quest System - Unreal Engine 5</title>
+      <link>http://localhost:1313/personal-projects/quest-system/</link>
+      <pubDate>Thu, 05 Sep 2024 11:57:22 +0100</pubDate>
+      <guid>http://localhost:1313/personal-projects/quest-system/</guid>
+      <description>Multiplayer Quest System I decided to challenge myself by creating a multiplayer quest system. I wanted to create a system that would allow for a variety of quest types &amp;amp; quest rewards, and be able to handle multiple players.&#xA;The approach I went for was a very Object-Oriented one. Everything is split up into different classes that will handle the different aspects of the quest system. Quests contain stages which hold Objectives, which hold a set of prerequisites and rewards and they can track the progress via a Progress Object.</description>
+    </item>
+    <item>
+      <title>Multiplayer Inventory &amp; Crafting - Unreal Engine 5</title>
+      <link>http://localhost:1313/personal-projects/inventory/</link>
+      <pubDate>Thu, 05 Sep 2024 11:57:04 +0100</pubDate>
+      <guid>http://localhost:1313/personal-projects/inventory/</guid>
+      <description>I have been working on a project that involves an inventory and crafting system. I have been using Unreal Engine 5 and C++ to create this system.&#xA;This system will need to be functional for multiplayer, easy to extend and easy to use. I have been using a lot of the built-in Unreal Engine features to make this system as robust as possible.&#xA;I have integrated the systems into the Editor and made it easy to create new items and recipes.</description>
+    </item>
+    <item>
+      <title>Pervasive Gaming</title>
+      <link>http://localhost:1313/university-projects/pervasive-gaming/</link>
+      <pubDate>Thu, 05 Sep 2024 11:50:57 +0100</pubDate>
+      <guid>http://localhost:1313/university-projects/pervasive-gaming/</guid>
+      <description>University Module - Pervasive Gaming Github Repo&#xA;This unit was one of my favourites at University, as it was a challenge to create a game without the traditional inputs that are the norm in the industry. I had set myself a self imposed goal of developing the game without using mouse or keyboard or gamepad as inputs, but instead use Hand Gestures using UltraLeap, alongside Voice Recognition using the built in libraries as well eye tracking as a stretch goal.</description>
+    </item>
+    <item>
+      <title>Data Engineering</title>
+      <link>http://localhost:1313/university-projects/data-engineering/</link>
+      <pubDate>Thu, 05 Sep 2024 11:46:29 +0100</pubDate>
+      <guid>http://localhost:1313/university-projects/data-engineering/</guid>
+      <description>Storyplaces I was employed as a placement with my University. I was given a goal to present my analysis findings to a group of PhD students, and to help me with this my manager gave me a list of tasks that needed doing from the weekly level, with an individual list of goals for each week. I used primarily Python and more specifically Pandas for this project.&#xA;For the first week it was purely exploratory analysis, finding basic things out like how many users on any given day, how long did each user spend on average, etc.</description>
+    </item>
+    <item>
+      <title>Equine VR</title>
+      <link>http://localhost:1313/university-projects/equine-vr/</link>
+      <pubDate>Thu, 05 Sep 2024 10:58:17 +0100</pubDate>
+      <guid>http://localhost:1313/university-projects/equine-vr/</guid>
+      <description>Equine VR This was the main job I did over the summer of 2022, working at the University developing a VR project.&#xA;The aim of this project was to produce a prototype AI horse that could respond to 3 parameters in a realistic manner. These were:&#xA;Focus - Where you are looking and how hard you are looking at it Ask - How much energy you are bringing into yourself Neutral - How you are behaving around the horse These might not be the best definitions, but the more important component is how the horse should respond to these parameters</description>
+    </item>
+  </channel>
+</rss>

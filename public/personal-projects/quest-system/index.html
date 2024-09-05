@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en-gb">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Multiplayer Quest System - Unreal Engine 5 // Agent Arachnids Anthology</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Paul Brown" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.5b1fcc8902588589c4767187402a3c29f8b8d7a6fdef6d9f8f77045bb0d14fee.css" />
+    
+
+    
+  
+
+
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Multiplayer Quest System - Unreal Engine 5">
+  <meta name="twitter:description" content="Multiplayer Quest System I decided to challenge myself by creating a multiplayer quest system. I wanted to create a system that would allow for a variety of quest types &amp; quest rewards, and be able to handle multiple players.
+The approach I went for was a very Object-Oriented one. Everything is split up into different classes that will handle the different aspects of the quest system. Quests contain stages which hold Objectives, which hold a set of prerequisites and rewards and they can track the progress via a Progress Object.">
+
+    <meta property="og:url" content="http://localhost:1313/personal-projects/quest-system/">
+  <meta property="og:site_name" content="Agent Arachnids Anthology">
+  <meta property="og:title" content="Multiplayer Quest System - Unreal Engine 5">
+  <meta property="og:description" content="Multiplayer Quest System I decided to challenge myself by creating a multiplayer quest system. I wanted to create a system that would allow for a variety of quest types &amp; quest rewards, and be able to handle multiple players.
+The approach I went for was a very Object-Oriented one. Everything is split up into different classes that will handle the different aspects of the quest system. Quests contain stages which hold Objectives, which hold a set of prerequisites and rewards and they can track the progress via a Progress Object.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="personal-projects">
+    <meta property="article:published_time" content="2024-09-05T11:57:22+01:00">
+    <meta property="article:modified_time" content="2024-09-05T11:57:22+01:00">
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      
+      <span class="app-header-title">Agent Arachnids Anthology</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/personal-projects/">Personal Projects</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/professional-projects/">Professional Projects</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tutorials/">Tutorials</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/university-projects/">University Projects</a>
+      </nav>
+      <p>Lead Developer of Spyderweb Studios, and Multiplayer Technical Designer</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/agentarachnid66" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github Account</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://www.linkedin.com/in/paul-b-745268138/" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>LinkedIn</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg>
+          </a>
+        
+          <a href="https://www.youtube.com/@agentarachnid2009" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-youtube">
+  <title>YouTube</title>
+  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Multiplayer Quest System - Unreal Engine 5</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Sep 5, 2024
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          6 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h1 id="multiplayer-quest-system">Multiplayer Quest System</h1>
+<p>I decided to challenge myself by creating a multiplayer quest system.
+I wanted to create a system that would allow for a variety of quest types &amp; quest rewards,
+and be able to handle multiple players.</p>
+<p>The approach I went for was a very Object-Oriented one. Everything is split up into different classes that will handle the different aspects of the quest system. Quests contain stages which hold Objectives, which hold a set of prerequisites and rewards and they can track the progress via a Progress Object.</p>
+<p><img src="https://imgur.com/m8uNuxN.png" alt=""></p>
+<h2 id="quest-data">Quest Data</h2>
+<p>The Data Asset can be setup to provide a wide range of possibilities. In the example below, I have setup an quest for the player who was assigned the murderer role. You can see that it has the prerequisite for a role, which prevents this quest being accidentally added to another role. You can add prerequisites for pretty much anything, and you can add as many as you require.</p>
+<p><img src="https://imgur.com/ppTRlmT.png" alt=""></p>
+<p>Each of these components can be extended to create a variety of different quest types. To add on to this, I have set the system up to be easy to use by using instanced objects that can be created in the editor and then used in the game.</p>
+<p><img src="https://imgur.com/zckujE7.png" alt=""></p>
+<h3 id="progress-objects">Progress Objects</h3>
+<p>The Instanced Objects can be used to create a variety of different quest types. Each of them have their own set of
+variables to config the Objective to be used in the game. This allows for a lot of flexibility in the system.</p>
+<p><img src="https://imgur.com/MCfnLeR.png" alt=""></p>
+<p>Easily one of the simplest, yet powerful, features of the Progress Object is the Progress Text field. This is a text
+field that will be used to display the progress of the Objective to the player using tokens that can be registered
+by the Progress Object. In this instance, it has the token <code>{Distance}</code> which will be replaced with the distance the player
+has to the target. For example, in the Timer class it will have other tokens such as <code>{Time}</code> and <code>{TimeLeft}</code>. You can
+add to these tokens in the Blueprint Classes as well.</p>
+<p>Each Objective State have their own Pre-requisites and Rewards, so if you have a quest that requires you to kill 10 enemies in
+order to complete it, you can set the pre-requisites to <code>Completed</code> to be 10 enemies killed and the reward to be 100 gold.</p>
+<p>The Progress Priority is used to determine which Objective State should be tracked first. This is usually not needed to be altered,
+but it is there to allow for more complex quest types.</p>
+<h3 id="prerequisite-objects">Prerequisite Objects</h3>
+<p>Before an Objective can be accepted or change state, the Player that owns the Objective must meet the prerequisites.
+This is where the Prerequisite Object comes in. It is a simple class that holds a set of Prerequisites that must be
+met before the action can be taken. These can be as simple as checking if the Player has a certain item in their inventory,
+or implements the right interface, or it can be as complex as a composite that checks that the player has completed a
+Quest and is a certain level.</p>
+<p>Currently, it does not return anything if the Player has failed the prerequisite check, but this can be added in the future.
+This would be a good feature as it will allow for more complex quest types that can be failed and retried, or to give player
+feedback on why they can&rsquo;t accept the Objective. This feature is a part of the internal roadmap for after releasing the plugin on the marketplace.</p>
+<h3 id="reward-objects">Reward Objects</h3>
+<p><img src="https://imgur.com/7GwfysD.png" alt=""></p>
+<p>After changing the state of an objective, the Player can receive Rewards. These can be added to any Objective State and
+will be given to the Player when the Objective State is changed. This is a simple class that holds the data for the
+reward to give. This can be as simple as giving the Player 100 gold, or as complex as giving the Player a new item. The
+aim of this system was to be able to extend to interact with any system in the game.</p>
+<p>You can create custom reward objects for any purpose and to interact with external systems. In the plugin, I have included
+a simple XP Component and Gold Management Component to give examples on how to do this in both C++ and Blueprint.</p>
+<p>I&rsquo;d like to add to the base class to be able to retrieve information for the UI. This would allow for the UI to display
+the rewards dynamically.</p>
+<h2 id="components">Components</h2>
+<p>The Quest Manager is the main class that will handle the quest system. It will be responsible for receiving the
+quests and tracking the progress on them. This is the component that will be owned by the Player on the network and
+be responsible for replicating the Quest data.</p>
+<p>I uses a Fast Array to store the Objectives and Progress Objects separately. This is to allow for quick access to the
+relevant data. This is important as the system will be used in a multiplayer game and will need to be able to handle
+a lot of data quickly and efficiently. In larger scale games with potentially thousands of Quests, only replicating the
+data that has changed will greatly improve the performance of the system.</p>
+<p>Another benefit of using a Fast Array is that it is easier to handle a Listen Server architecture as you can broadcast an event when
+it changes and the clients can broadcast the event when it receives the change in the replication functions
+(<code>PostReplicatedAdd</code>, <code>PostReplicatedChange</code>). Using traditional <code>TArray</code> would require less clean code to achieve the same result.</p>
+<p>When an Objective is added, it will create a duplicate of the Progress Object and add it to the Progress Array. This is
+how the system will be able to track the progress of the Objective whilst keeping the original data intact. In earlier
+prototypes, the data assets themselves would keep track of each player&rsquo;s progress, but this was not efficient and would
+not work well in a multiplayer game. I&rsquo;m glad I took a step back to re-evaluate the system and re-implement it in a
+more efficient way.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>I&rsquo;m happy with the progress I&rsquo;ve made on this system. It&rsquo;s been a great learning experience and I&rsquo;ve been able to
+create a system that is very flexible and can be used in a variety of different games. I&rsquo;m looking forward to
+extending this system to be able to interact with other systems in the game and to be able to create more complex
+quest types.</p>
+<p>I&rsquo;m looking into publishing this system to the Unreal Marketplace in the future. I think it would be a great asset
+for other developers to use in their games and a great competitor to the other quest systems on the marketplace that
+are more rigid in their design.</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
