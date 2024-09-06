@@ -1,7 +1,6 @@
 +++
 title = 'Loading Different Gamemodes on the Same Map - Unreal Engine 5'
 date = 2024-09-06T12:43:31+01:00
-draft = true
 +++
 
 Being able to simply change the gamemode to play at runtime is a great idea for a lot of developers. It makes sense to be able to save time making one map, but make it playable for multiple game modes. 
