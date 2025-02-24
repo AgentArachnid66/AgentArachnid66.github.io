@@ -6,28 +6,35 @@
     <description>Recent content in Professional Projects on Agent Arachnids Anthology</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 05 Sep 2024 14:27:52 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 23 Feb 2025 23:39:36 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/professional-projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Besieged - a Historical Battle Board Game</title>
+      <link>http://localhost:1313/professional-projects/besieged---a-historical-battle-board-game/</link>
+      <pubDate>Sun, 23 Feb 2025 23:39:36 +0000</pubDate>
+      <guid>http://localhost:1313/professional-projects/besieged---a-historical-battle-board-game/</guid>
+      <description>Overview This is a board game that I developed in my first year of university with 2 friends, we developed it initially as an exercise in designing basic games.&#xA;The game is designed for 2 people, each one having access to a castle and a mine. Each turn ends when either a player voluntary ends their turn, or they have no available moves left.&#xA;Win Condition The main win condition is to capture the opponents keep.</description>
+    </item>
     <item>
       <title>Unannounced</title>
       <link>http://localhost:1313/professional-projects/unannounced/</link>
-      <pubDate>Thu, 05 Sep 2024 14:27:52 +0100</pubDate>
+      <pubDate>Tue, 03 Sep 2024 14:27:52 +0100</pubDate>
       <guid>http://localhost:1313/professional-projects/unannounced/</guid>
       <description>This project is yet to be announced, but since it is my own project I&amp;rsquo;m more than happy and able to share about my involvement.&#xA;Role: Lead Developer In this personal project, I’ve taken on multiple roles, including programmer, designer, modeller, and project manager. Over the past year, I have been dedicated to creating a social deduction game set in Victorian London, inspired by titles like Among Us. As the sole developer, I’ve been responsible for building every aspect of the game, with a strong focus on technical implementation.</description>
     </item>
     <item>
-      <title>GoldenTides</title>
-      <link>http://localhost:1313/professional-projects/goldentides/</link>
-      <pubDate>Thu, 05 Sep 2024 14:27:41 +0100</pubDate>
-      <guid>http://localhost:1313/professional-projects/goldentides/</guid>
-      <description>Role: Unreal Engineer In my role as an Unreal Engineer for Golden Tides, I was tasked with designing and implementing code to meet both technical requirements and gameplay goals. A primary focus was ensuring that the code could scale effectively and maintain functionality within multiplayer environments. Although I had limited prior experience with networking in Unreal Engine, I embraced this challenge, growing significantly as a developer throughout the project.&#xA;Multiplayer Networking Despite being new to Unreal Engine&amp;rsquo;s networking systems at the start, I quickly adapted and implemented multiplayer features that supported seamless gameplay.</description>
-    </item>
-    <item>
       <title>AUDL</title>
       <link>http://localhost:1313/professional-projects/audl/</link>
-      <pubDate>Thu, 05 Sep 2024 14:27:36 +0100</pubDate>
+      <pubDate>Sun, 25 Aug 2024 14:27:36 +0100</pubDate>
       <guid>http://localhost:1313/professional-projects/audl/</guid>
       <description>Role: Gameplay Developer at Ultix Technology In my role at Ultix Technology, I have been instrumental in the development of key gameplay systems, focusing on both single-player and multiplayer functionality. By balancing technical precision and creativity, I ensure seamless user experiences across different game modes. My expertise extends beyond development, enabling me to lead and mentor team members on best practices and innovative approaches in Unreal Engine.&#xA;Unreal Engine (C++ and Blueprints) I utilize both C++ and Unreal Engine Blueprints, allowing me to optimize the workflow and accelerate design iteration.</description>
+    </item>
+    <item>
+      <title>GoldenTides</title>
+      <link>http://localhost:1313/professional-projects/goldentides/</link>
+      <pubDate>Fri, 02 Jun 2023 14:27:41 +0100</pubDate>
+      <guid>http://localhost:1313/professional-projects/goldentides/</guid>
+      <description>Role: Unreal Engineer In my role as an Unreal Engineer for Golden Tides, I was tasked with designing and implementing code to meet both technical requirements and gameplay goals. A primary focus was ensuring that the code could scale effectively and maintain functionality within multiplayer environments. Although I had limited prior experience with networking in Unreal Engine, I embraced this challenge, growing significantly as a developer throughout the project.&#xA;Multiplayer Networking Despite being new to Unreal Engine&amp;rsquo;s networking systems at the start, I quickly adapted and implemented multiplayer features that supported seamless gameplay.</description>
     </item>
   </channel>
 </rss>

@@ -1,7 +1,7 @@
 baseURL = 'https://agentarachnid66.github.io'
 languageCode = 'en-gb'
 title = 'Agent Arachnids Anthology'
-theme = 'hugo-theme-m10c'
+theme = "ananke"
 sectionPagesMenu = 'main'
 
 params.author = 'Paul Brown'

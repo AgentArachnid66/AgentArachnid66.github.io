@@ -6,26 +6,33 @@
     <description>Recent content in Tutorials on Agent Arachnids Anthology</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 05 Sep 2024 14:19:50 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 06 Sep 2024 12:43:31 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Loading Different Gamemodes on the Same Map - Unreal Engine 5</title>
+      <link>http://localhost:1313/tutorials/loaddifferentgamemode/</link>
+      <pubDate>Fri, 06 Sep 2024 12:43:31 +0100</pubDate>
+      <guid>http://localhost:1313/tutorials/loaddifferentgamemode/</guid>
+      <description>Being able to simply change the gamemode to play at runtime is a great idea for a lot of developers. It makes sense to be able to save time making one map, but make it playable for multiple game modes.&#xA;However, doing this has eluded many developers when it is actually quite simple to do when you know how to do it.&#xA;The trick is to use Travel URLs when moving between different maps.</description>
+    </item>
     <item>
       <title>Optimisation</title>
       <link>http://localhost:1313/tutorials/optimisation/</link>
-      <pubDate>Thu, 05 Sep 2024 14:19:50 +0100</pubDate>
+      <pubDate>Sun, 25 Aug 2024 14:19:50 +0100</pubDate>
       <guid>http://localhost:1313/tutorials/optimisation/</guid>
       <description>Unreal Engine Optimisation Optimisation in Unreal Engine has a few different aspects to it, from optimising the code to optimising the assets. This tutorial will cover some of the ways you can optimise your Unreal Engine project to improve performance.&#xA;First thing to keep in mind is that this is going to cover generic optimisation as each project is different and may require different optimisation techniques.&#xA;Unreal Insights Unreal Insights is a tool that can help you identify performance issues in your project.</description>
     </item>
     <item>
       <title>Custom Target.cs files and why you should use them</title>
       <link>http://localhost:1313/tutorials/target_cs/</link>
-      <pubDate>Thu, 05 Sep 2024 14:19:39 +0100</pubDate>
+      <pubDate>Fri, 05 Jul 2024 14:19:39 +0100</pubDate>
       <guid>http://localhost:1313/tutorials/target_cs/</guid>
       <description>Background For my current project, I&amp;rsquo;ve implemented EOS and EOSPlus so I can support crossplay and have an easy multiplayer solution. The main problem I&amp;rsquo;ve been facing recently though was the ability to target both EOS and Steam independently from each other, and without altering the Config/DefaultEngine.ini directly each time I wanted to make a build for each storefront.&#xA;As they use the same Platform (Windows, Linux, Mac, etc), I couldn&amp;rsquo;t easily rely on Platform Configs.</description>
     </item>
     <item>
       <title>Custom EQS Test</title>
       <link>http://localhost:1313/tutorials/custom-eqs-test/</link>
-      <pubDate>Thu, 05 Sep 2024 14:19:16 +0100</pubDate>
+      <pubDate>Tue, 16 May 2023 14:19:16 +0100</pubDate>
       <guid>http://localhost:1313/tutorials/custom-eqs-test/</guid>
       <description>EQS (Environment Query System) is a powerful tool when making an AI in Unreal Engine. Creating your own EQS Tests can open the way for more advanced interactions and more intelligent decision making.&#xA;In this tutorial, we will be making an EQS Test that can get a value from an actor using an interface.&#xA;EQS Test We will start by making a C++ Class:&#xA;Expand out the All Actors and search for EnvQueryTest</description>
     </item>

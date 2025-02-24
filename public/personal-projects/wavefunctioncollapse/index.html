@@ -1,24 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-gb">
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <title>Generic Wave Function Collapse - Unreal Engine 5 - C&#43;&#43; Implementation // Agent Arachnids Anthology</title>
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Generic Wave Function Collapse - Unreal Engine 5 - C&#43;&#43; Implementation | Agent Arachnids Anthology</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="I knew that I wanted to implement a procedural algorithm for my latest project, and decided on creating a wave function collapse algorithm as it seemed like a good starting point for learning more advanced procedural algorithms. To add more challenge to this, I wasn&rsquo;t using it for generating maps, or textures but instead wanted it to interact with choosing which items to spawn into the map based on a variety of factors that were not known when starting the implementation.">
     <meta name="generator" content="Hugo 0.133.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Paul Brown" />
-    <meta name="description" content="" />
-    <link rel="stylesheet" href="/css/main.min.5b1fcc8902588589c4767187402a3c29f8b8d7a6fdef6d9f8f77045bb0d14fee.css" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+      <meta name="author" content = "Paul Brown">
     
 
     
-  
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
 
 
     
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Generic Wave Function Collapse - Unreal Engine 5 - C&#43;&#43; Implementation">
-  <meta name="twitter:description" content="I knew that I wanted to implement a procedural algorithm for my latest project, and decided on creating a wave function collapse algorithm as it seemed like a good starting point for learning more advanced procedural algorithms. To add more challenge to this, I wasn’t using it for generating maps, or textures but instead wanted it to interact with choosing which items to spawn into the map based on a variety of factors that were not known when starting the implementation.">
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/personal-projects/wavefunctioncollapse/">
+    
 
     <meta property="og:url" content="http://localhost:1313/personal-projects/wavefunctioncollapse/">
   <meta property="og:site_name" content="Agent Arachnids Anthology">
@@ -27,77 +43,122 @@
   <meta property="og:locale" content="en_gb">
   <meta property="og:type" content="article">
     <meta property="article:section" content="personal-projects">
-    <meta property="article:published_time" content="2024-09-05T11:57:26+01:00">
-    <meta property="article:modified_time" content="2024-09-05T11:57:26+01:00">
+    <meta property="article:published_time" content="2024-09-04T11:57:26+01:00">
+    <meta property="article:modified_time" content="2024-09-04T11:57:26+01:00">
 
+  <meta itemprop="name" content="Generic Wave Function Collapse - Unreal Engine 5 - C&#43;&#43; Implementation">
+  <meta itemprop="description" content="I knew that I wanted to implement a procedural algorithm for my latest project, and decided on creating a wave function collapse algorithm as it seemed like a good starting point for learning more advanced procedural algorithms. To add more challenge to this, I wasn’t using it for generating maps, or textures but instead wanted it to interact with choosing which items to spawn into the map based on a variety of factors that were not known when starting the implementation.">
+  <meta itemprop="datePublished" content="2024-09-04T11:57:26+01:00">
+  <meta itemprop="dateModified" content="2024-09-04T11:57:26+01:00">
+  <meta itemprop="wordCount" content="1590">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Generic Wave Function Collapse - Unreal Engine 5 - C&#43;&#43; Implementation">
+  <meta name="twitter:description" content="I knew that I wanted to implement a procedural algorithm for my latest project, and decided on creating a wave function collapse algorithm as it seemed like a good starting point for learning more advanced procedural algorithms. To add more challenge to this, I wasn’t using it for generating maps, or textures but instead wanted it to interact with choosing which items to spawn into the map based on a variety of factors that were not known when starting the implementation.">
 
+	
   </head>
-  <body>
-    <header class="app-header">
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
       
-      <span class="app-header-title">Agent Arachnids Anthology</span>
-      <nav class="app-header-menu">
-          <a class="app-header-menu-item" href="/personal-projects/">Personal Projects</a>
-             - 
-          
-          <a class="app-header-menu-item" href="/professional-projects/">Professional Projects</a>
-             - 
-          
-          <a class="app-header-menu-item" href="/tutorials/">Tutorials</a>
-             - 
-          
-          <a class="app-header-menu-item" href="/university-projects/">University Projects</a>
-      </nav>
-      <p>Lead Developer of Spyderweb Studios, and Multiplayer Technical Designer</p>
-      <div class="app-header-social">
-        
-          <a href="https://github.com/agentarachnid66" target="_blank" rel="noreferrer noopener me">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
-  <title>Github Account</title>
-  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-</svg>
-          </a>
-        
-          <a href="https://www.linkedin.com/in/paul-b-745268138/" target="_blank" rel="noreferrer noopener me">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
-  <title>LinkedIn</title>
-  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
-</svg>
-          </a>
-        
-          <a href="https://www.youtube.com/@agentarachnid2009" target="_blank" rel="noreferrer noopener me">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-youtube">
-  <title>YouTube</title>
-  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-</svg>
-          </a>
-        
-      </div>
-    </header>
-    <main class="app-container">
+        Agent Arachnids Anthology
       
-  <article class="post">
-    <header class="post-header">
-      <h1 class ="post-title">Generic Wave Function Collapse - Unreal Engine 5 - C&#43;&#43; Implementation</h1>
-      <div class="post-meta">
-        <div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
-  <title>calendar</title>
-  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
-</svg>
-          Sep 5, 2024
-        </div>
-        <div>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
-  <title>clock</title>
-  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-</svg>
-          8 min read
-        </div>
-      </div>
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/personal-projects/" title="Personal Projects page">
+              Personal Projects
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/professional-projects/" title="Professional Projects page">
+              Professional Projects
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/tutorials/" title="Tutorials page">
+              Tutorials
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/university-projects/" title="University Projects page">
+              University Projects
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Personal Projects
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Generic Wave Function Collapse - Unreal Engine 5 - C&#43;&#43; Implementation</h1>
+      
+      <p class="tracked">
+        By <strong>Paul Brown</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-09-04T11:57:26+01:00">September 4, 2024</time>
+      
+
+      
+      
     </header>
-    <div class="post-content">
-      <p>I knew that I wanted to implement a procedural algorithm for my latest project, and decided on creating a wave function collapse algorithm as it seemed like a good starting point for learning more advanced procedural algorithms. To add more challenge to this, I wasn&rsquo;t using it for generating maps, or textures but instead wanted it to interact with choosing which items to spawn into the map based on a variety of factors that were not known when starting the implementation.</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>I knew that I wanted to implement a procedural algorithm for my latest project, and decided on creating a wave function collapse algorithm as it seemed like a good starting point for learning more advanced procedural algorithms. To add more challenge to this, I wasn&rsquo;t using it for generating maps, or textures but instead wanted it to interact with choosing which items to spawn into the map based on a variety of factors that were not known when starting the implementation.</p>
 <p>Since I wanted this to be as extensible and useful as possible, I decided to implement it using an interface and the subsystem would hold an array of registered objects. Each UObject would handle how they would receive the propagation from the system, how they define their entropy and how they collapse.</p>
 <h2 id="basic-algorithm">Basic Algorithm</h2>
 <p>Each Node has an <strong>entropy</strong> value, this represents how many possible states that Node has. Whilst there is a Node in the graph that has an entropy greater than 1, we select a <strong>Node</strong> to collapse and then <strong>propagate that change</strong> to it&rsquo;s neighbours. These neighbours receive this change, compare it to it&rsquo;s own <strong>states</strong> and remove the states that are no longer possible with it&rsquo;s <strong>constraints</strong>. If a Node has an entropy of 0, then it no longer has any possible states. Depending on how you want to deal with this, you could either remove the Node or reset the wave function and try again.</p>
@@ -317,13 +378,37 @@ associated with such as their world location.</p>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>	UFUNCTION(BlueprintNativeEvent, BlueprintAuthorityOnly, BlueprintCallable, Category <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wave Function Collapse&#34;</span>)
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">bool</span> AreNodeStatesCompatible(<span style="color:#66d9ef">const</span> UWFC_StatePrimaryDataAsset<span style="color:#f92672">*</span> StateA, <span style="color:#66d9ef">const</span> UWFC_StatePrimaryDataAsset<span style="color:#f92672">*</span> StateB, <span style="color:#66d9ef">const</span> UObject<span style="color:#f92672">*</span> NodeA, <span style="color:#66d9ef">const</span> UObject<span style="color:#f92672">*</span> NodeB) <span style="color:#66d9ef">const</span>;
-</span></span></code></pre></div>
-    </div>
-    <div class="post-footer">
+</span></span></code></pre></div><ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
       
+      
+      </div>
     </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
   </article>
 
     </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  Agent Arachnids Anthology 2025 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
   </body>
 </html>

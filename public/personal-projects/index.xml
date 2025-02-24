@@ -6,26 +6,33 @@
     <description>Recent content in Personal Projects on Agent Arachnids Anthology</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 05 Sep 2024 11:57:26 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 19 Feb 2025 18:01:19 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/personal-projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Validation - Unreal Engine 5 - C&#43;&#43;</title>
+      <link>http://localhost:1313/personal-projects/data-validation/</link>
+      <pubDate>Wed, 19 Feb 2025 18:01:19 +0000</pubDate>
+      <guid>http://localhost:1313/personal-projects/data-validation/</guid>
+      <description>Validating your own classes and data is a vital step in most projects, and especially with a lack of a proper QA department/step that cannot catch all bugs. Making sure that all the data that is cooked into the project is in the proper form that your code expects to, in order to execute as intended and prevent undefined behaviour whereever possible.&#xA;The first step on how to do this is to enable the Data Validation Plugin</description>
+    </item>
     <item>
       <title>Generic Wave Function Collapse - Unreal Engine 5 - C&#43;&#43; Implementation</title>
       <link>http://localhost:1313/personal-projects/wavefunctioncollapse/</link>
-      <pubDate>Thu, 05 Sep 2024 11:57:26 +0100</pubDate>
+      <pubDate>Wed, 04 Sep 2024 11:57:26 +0100</pubDate>
       <guid>http://localhost:1313/personal-projects/wavefunctioncollapse/</guid>
       <description>I knew that I wanted to implement a procedural algorithm for my latest project, and decided on creating a wave function collapse algorithm as it seemed like a good starting point for learning more advanced procedural algorithms. To add more challenge to this, I wasn&amp;rsquo;t using it for generating maps, or textures but instead wanted it to interact with choosing which items to spawn into the map based on a variety of factors that were not known when starting the implementation.</description>
     </item>
     <item>
       <title>Multiplayer Quest System - Unreal Engine 5</title>
       <link>http://localhost:1313/personal-projects/quest-system/</link>
-      <pubDate>Thu, 05 Sep 2024 11:57:22 +0100</pubDate>
+      <pubDate>Sun, 21 Apr 2024 11:57:22 +0100</pubDate>
       <guid>http://localhost:1313/personal-projects/quest-system/</guid>
       <description>Multiplayer Quest System I decided to challenge myself by creating a multiplayer quest system. I wanted to create a system that would allow for a variety of quest types &amp;amp; quest rewards, and be able to handle multiple players.&#xA;The approach I went for was a very Object-Oriented one. Everything is split up into different classes that will handle the different aspects of the quest system. Quests contain stages which hold Objectives, which hold a set of prerequisites and rewards and they can track the progress via a Progress Object.</description>
     </item>
     <item>
       <title>Multiplayer Inventory &amp; Crafting - Unreal Engine 5</title>
       <link>http://localhost:1313/personal-projects/inventory/</link>
-      <pubDate>Thu, 05 Sep 2024 11:57:04 +0100</pubDate>
+      <pubDate>Tue, 16 Jan 2024 11:57:04 +0100</pubDate>
       <guid>http://localhost:1313/personal-projects/inventory/</guid>
       <description>I have been working on a project that involves an inventory and crafting system. I have been using Unreal Engine 5 and C++ to create this system.&#xA;This system will need to be functional for multiplayer, easy to extend and easy to use. I have been using a lot of the built-in Unreal Engine features to make this system as robust as possible.&#xA;I have integrated the systems into the Editor and made it easy to create new items and recipes.</description>
     </item>

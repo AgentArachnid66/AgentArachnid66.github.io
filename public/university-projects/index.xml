@@ -6,28 +6,35 @@
     <description>Recent content in University Projects on Agent Arachnids Anthology</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 05 Sep 2024 11:50:57 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 14 Nov 2024 11:46:29 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/university-projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Pervasive Gaming</title>
-      <link>http://localhost:1313/university-projects/pervasive-gaming/</link>
-      <pubDate>Thu, 05 Sep 2024 11:50:57 +0100</pubDate>
-      <guid>http://localhost:1313/university-projects/pervasive-gaming/</guid>
-      <description>University Module - Pervasive Gaming Github Repo&#xA;This unit was one of my favourites at University, as it was a challenge to create a game without the traditional inputs that are the norm in the industry. I had set myself a self imposed goal of developing the game without using mouse or keyboard or gamepad as inputs, but instead use Hand Gestures using UltraLeap, alongside Voice Recognition using the built in libraries as well eye tracking as a stretch goal.</description>
+      <title>Burn Unit</title>
+      <link>http://localhost:1313/university-projects/burn-unit/</link>
+      <pubDate>Thu, 14 Nov 2024 11:46:29 +0100</pubDate>
+      <guid>http://localhost:1313/university-projects/burn-unit/</guid>
+      <description>This was my final year project, born out of my passion for a concept called games based learning and what I learned to call Serious Games. These are games that aim to teach the player something, a skill or piece of knowledge for example. In my case, initially I wanted to create a game solely dedicated to teaching the player how to perform first aid, at least to the degree that they&amp;rsquo;d be useful enough in an actual emergency situation until proper medical attention can be given.</description>
     </item>
     <item>
       <title>Data Engineering</title>
       <link>http://localhost:1313/university-projects/data-engineering/</link>
-      <pubDate>Thu, 05 Sep 2024 11:46:29 +0100</pubDate>
+      <pubDate>Tue, 05 Sep 2023 11:46:29 +0100</pubDate>
       <guid>http://localhost:1313/university-projects/data-engineering/</guid>
       <description>Storyplaces I was employed as a placement with my University. I was given a goal to present my analysis findings to a group of PhD students, and to help me with this my manager gave me a list of tasks that needed doing from the weekly level, with an individual list of goals for each week. I used primarily Python and more specifically Pandas for this project.&#xA;For the first week it was purely exploratory analysis, finding basic things out like how many users on any given day, how long did each user spend on average, etc.</description>
     </item>
     <item>
       <title>Equine VR</title>
       <link>http://localhost:1313/university-projects/equine-vr/</link>
-      <pubDate>Thu, 05 Sep 2024 10:58:17 +0100</pubDate>
+      <pubDate>Mon, 05 Sep 2022 10:58:17 +0100</pubDate>
       <guid>http://localhost:1313/university-projects/equine-vr/</guid>
       <description>Equine VR This was the main job I did over the summer of 2022, working at the University developing a VR project.&#xA;The aim of this project was to produce a prototype AI horse that could respond to 3 parameters in a realistic manner. These were:&#xA;Focus - Where you are looking and how hard you are looking at it Ask - How much energy you are bringing into yourself Neutral - How you are behaving around the horse These might not be the best definitions, but the more important component is how the horse should respond to these parameters</description>
+    </item>
+    <item>
+      <title>Pervasive Gaming</title>
+      <link>http://localhost:1313/university-projects/pervasive-gaming/</link>
+      <pubDate>Mon, 21 Feb 2022 11:50:57 +0100</pubDate>
+      <guid>http://localhost:1313/university-projects/pervasive-gaming/</guid>
+      <description>University Module - Pervasive Gaming Github Repo&#xA;This unit was one of my favourites at University, as it was a challenge to create a game without the traditional inputs that are the norm in the industry. I had set myself a self imposed goal of developing the game without using mouse or keyboard or gamepad as inputs, but instead use Hand Gestures using UltraLeap, alongside Voice Recognition using the built in libraries as well eye tracking as a stretch goal.</description>
     </item>
   </channel>
 </rss>
