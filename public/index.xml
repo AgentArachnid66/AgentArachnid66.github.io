@@ -6,14 +6,21 @@
     <description>Recent content on Agent Arachnids Anthology</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 23 Feb 2025 23:39:36 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Oct 2025 13:54:48 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Multiplayer Character Selection</title>
+      <link>http://localhost:1313/personal-projects/multiplayercharacterselection/</link>
+      <pubDate>Wed, 01 Oct 2025 13:54:48 +0100</pubDate>
+      <guid>http://localhost:1313/personal-projects/multiplayercharacterselection/</guid>
+      <description>Intro Being able to select a character to play as, is a vital component for some multiplayer and singleplayer games but there are a lot of ways that this can be achieved. Some of these methods are better than others, and will depend on the engine used. In this article, I will be using Unreal Engine 5, and so will be using one of the best workflows for it.&#xA;Overview I will be using the Seamless Travel feature of UE5 to maintain the data when we travel from the character selection screen to the game map.</description>
+    </item>
     <item>
       <title>Besieged - a Historical Battle Board Game</title>
       <link>http://localhost:1313/professional-projects/besieged---a-historical-battle-board-game/</link>
       <pubDate>Sun, 23 Feb 2025 23:39:36 +0000</pubDate>
       <guid>http://localhost:1313/professional-projects/besieged---a-historical-battle-board-game/</guid>
-      <description></description>
+      <description>Overview This is a board game that I developed in my first year of university with 2 friends, we developed it initially as an exercise in designing basic games.&#xA;The game is designed for 2 people, each one having access to a castle and a mine. Each turn ends when either a player voluntary ends their turn, or they have no available moves left.&#xA;Win Condition The main win condition is to capture the opponents keep.</description>
     </item>
     <item>
       <title>Data Validation - Unreal Engine 5 - C&#43;&#43;</title>

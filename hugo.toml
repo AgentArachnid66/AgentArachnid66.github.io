@@ -21,3 +21,8 @@ params.description = 'Lead Developer of Spyderweb Studios, and Multiplayer Techn
   icon = "youtube"
   name = "YouTube"
   url = "https://www.youtube.com/@agentarachnid2009"
+  
+[pagination]
+  disableAliases = false
+  pagerSize = 10
+  path = 'page'

@@ -6,8 +6,15 @@
     <description>Recent content in Personal Projects on Agent Arachnids Anthology</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 19 Feb 2025 18:01:19 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Oct 2025 13:54:48 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/personal-projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MultiplayerCharacterSelection</title>
+      <link>http://localhost:1313/personal-projects/multiplayercharacterselection/</link>
+      <pubDate>Wed, 01 Oct 2025 13:54:48 +0100</pubDate>
+      <guid>http://localhost:1313/personal-projects/multiplayercharacterselection/</guid>
+      <description>Intro Being able to select a character to play as, is a vital component for some multiplayer and singleplayer games but there are a lot of ways that this can be achieved. Some of these methods are better than others, and will depend on the engine used. In this article, I will be using Unreal Engine 5, and so will be using one of the best workflows for it.&#xA;Overview I will be using the Seamless Travel feature of UE5 to maintain the data when we travel from the character selection screen to the game map.</description>
+    </item>
     <item>
       <title>Data Validation - Unreal Engine 5 - C&#43;&#43;</title>
       <link>http://localhost:1313/personal-projects/data-validation/</link>
