@@ -1,7 +1,7 @@
 +++
 title = 'Multiplayer Character Selection'
 date = 2025-10-01T13:54:48+01:00
-draft = true
+
 +++
 
 # Intro
